@@ -1,0 +1,33 @@
+body{
+    background-color: #022f40;
+    color:white;
+    background: linear-gradient(rgb(0, 0, 0), rgba(18, 39, 55, 0.3)), url('../img/honey_im_subtle.png');
+}
+#navigation{
+    display: none;
+}
+#welcome{
+    background-color: #183446;
+    background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255,.3)),
+    url('../img/simple_dashed.png');
+}
+.section{
+    padding:50px 0px;
+}
+#profile-pic{
+    width:300px;
+    height: 300px;
+    border: 5px solid white;
+    border-radius: 100%;
+}
+#contact input{
+    color:navy;
+    font-weight: bolder;
+}
+.value-multiplier{
+    color: #1EAEDB;
+}
+.social-icons{
+    width:80px;
+    height:80px;
+}
