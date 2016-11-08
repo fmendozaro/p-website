@@ -20,21 +20,25 @@ $(document).ready(function() {
     });
 
     var pct = 0;
-    var limit = 90;
     var div_loading_progress = $(".div_loading_progress");
 
-    function display_pct(p) {
-        div_loading_progress.addClass("p"+p);
-    }
-
-    function update_pct(){
-        display_pct(pct++);
-
-        if (pct<=limit) {
-            setTimeout(update_pct,10);
+    function update_pct(limit, el){
+        pct++;
+        $(el).addClass("p" + pct);
+        if (pct < limit) {
+            console.log("loop" + pct);
+            setTimeout(update_pct(limit, $(el)),10);
         }
     }
 
-    setTimeout(update_pct,100);
+    function loadSkills(){
+        div_loading_progress.each(function (){
+            var limit = $(this).data("val");
+            setTimeout(update_pct(limit, $(this)),100);
+        });
+    }
+
+    loadSkills();
+
 
 });
