@@ -1,22 +1,81 @@
+@keyframes nav-intro{
+    0%{
+        top:  -120px;
+    }
+    100%{
+        top:  -60px;
+    }
+}
+
+@keyframes menu-intro-an{
+    from{
+        top:  -60px;
+    }
+    to{
+        top: 25%;
+        left:45%;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@keyframes menu-outro-an{
+    from{
+        top:  25%;
+        left:45%;
+        width: 250px;
+        height: 250px;
+    }
+    to{
+        top:  -60px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
 body{
     background-color: #022f40;
     color:white;
     background: linear-gradient(rgb(0, 0, 0), rgba(18, 39, 55, 0.3)), url('../img/honey_im_subtle.png');
 }
-#nav-btn{
-    position: absolute;
+#overlay{
+    position: fixed;
     top: 0;
-    left: 45%;
-    border: 5px solid white;
-    border-radius: 10%;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(7, 23, 37, 0.9);
+    display: none;
+}
+#close-overlay{
+    position: absolute;
+    right:50px;
+    font-size: xx-large;
+    cursor: pointer;
+}
+#nav-btn{
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    margin-left: -50px;.
+    border: 5px dotted white;
+    border-radius: 50%;
     width: 100px;
-    height: 50px;
+    height: 100px;
     background-color: #1EAEDB;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#nav-btn p{
+    padding-top: 60px;
     color:black;
     font-weight: bolder;
+    font-size: larger;
     text-align: center;
     vertical-align: middle;
 }
+
 #navigation{
     display: none;
 }
@@ -47,4 +106,20 @@ body{
 }
 .div_loading_progress span{
     color: #022f40;
+}
+
+.menu-load{
+    animation: nav-intro 0.5s 1;
+    animation-timing-function: ease-out;
+}
+
+.menu-intro{
+    animation: menu-intro-an 1s 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.menu-outro{
+    animation: menu-outro-an 1s 1;
+    animation-timing-function: ease-out;
 }

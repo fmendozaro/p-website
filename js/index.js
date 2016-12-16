@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(document).keydown(function (e) {
         if (e.keyCode === k[n++]) {
             if (n === k.length) {
-                alert('Konami !!!'); // à remplacer par votre code
+                console.log('Konami !!!');
                 n = 0;
                 return false;
             }
@@ -26,19 +26,38 @@ $(document).ready(function() {
         pct++;
         $(el).addClass("p" + pct);
         if (pct < limit) {
-            console.log("loop" + pct);
+            //console.log(" loop" + pct);
             setTimeout(update_pct(limit, $(el)),10);
+        }else{
+            pct = 0;
         }
     }
 
     function loadSkills(){
         div_loading_progress.each(function (){
             var limit = $(this).data("val");
-            setTimeout(update_pct(limit, $(this)),100);
+            update_pct(limit, $(this));
         });
     }
 
     loadSkills();
 
+    //click events
+    $("#nav-btn").click( function () {
+
+       $("#overlay").fadeIn();
+       $("#nav-btn").removeClass("menu-load");
+       $("#nav-btn").removeClass("menu-outro");
+       $("#nav-btn").addClass("menu-intro");
+
+    });
+
+    $("#close-overlay").click( function () {
+
+        $("#overlay").fadeOut();
+        $("#nav-btn").removeClass("menu-intro");
+        $("#nav-btn").addClass("menu-outro");
+
+    });
 
 });
