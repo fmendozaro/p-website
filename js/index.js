@@ -22,6 +22,8 @@ $(document).ready(function() {
     var pct = 0;
     var div_loading_progress = $(".div_loading_progress");
 
+    //Functions
+
     function update_pct(limit, el){
         pct++;
         $(el).addClass("p" + pct);
@@ -42,7 +44,21 @@ $(document).ready(function() {
 
     loadSkills();
 
-    //click events
+    function closeOverlay(){
+        $("#overlay").fadeOut();
+        $("#nav-btn").removeClass("menu-intro");
+        $("#nav-btn").addClass("menu-outro");
+    }
+
+    //Events
+
+    $(document).keyup(function(e) {
+        //ESC
+        if (e.keyCode === 27){
+            closeOverlay();
+        }
+    });
+
     $("#nav-btn").click( function () {
 
        $("#overlay").fadeIn();
@@ -54,9 +70,7 @@ $(document).ready(function() {
 
     $("#close-overlay").click( function () {
 
-        $("#overlay").fadeOut();
-        $("#nav-btn").removeClass("menu-intro");
-        $("#nav-btn").addClass("menu-outro");
+       closeOverlay();
 
     });
 
