@@ -79,14 +79,22 @@ body{
 #navigation{
     display: none;
 }
+
 #welcome{
     background-color: #183446;
+    height: 100vh;
     background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255,.3)),
     url('../img/simple_dashed.png');
 }
+
+#welcome .row{
+    margin-top:100px;
+}
+
 .section{
     padding:50px 0px;
 }
+
 #profile-pic{
     width:300px;
     height: 300px;
@@ -99,10 +107,6 @@ body{
 }
 .value-multiplier{
     color: #1EAEDB;
-}
-.social-icons{
-    width:80px;
-    height:80px;
 }
 .div_loading_progress span{
     color: #022f40;
@@ -122,4 +126,40 @@ body{
 .menu-outro{
     animation: menu-outro-an 1s 1;
     animation-timing-function: ease-out;
+}
+
+.hidden{
+    display: none;
+}
+
+#footer {
+    position: fixed;
+    left:0px;
+    bottom:0px;
+    height: auto;
+    width: 100%;
+}
+#f-content{
+    border-radius: 55%;
+    position:relative;
+    width:50%;
+    margin: auto;
+    background:#0FA0CE;
+    height:500px;
+    bottom:-450px;
+}
+.social-icons{
+    position: absolute;
+    top:-10px;
+    margin-left: 34%;
+    height:50px;
+    width:50px;
+}
+
+#icon-one{
+
+
+}
+#icon-two{
+    margin-left: 20%;
 }
