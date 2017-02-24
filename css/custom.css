@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
 @keyframes nav-intro{
     0%{
         top:  -120px;
@@ -162,4 +164,98 @@ body{
 }
 #icon-two{
     margin-left: 20%;
+}
+
+/*PsOne Intro*/
+
+#psone{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #04369B;
+    font-weight: bolder;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    z-index: 1001;
+
+}
+
+#psone h1, h2{
+    text-align: center;
+    padding:60px 0;
+}
+
+.rombo{
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3232+0,ffea30+50,ff0000+100 */
+    background: #ff3232; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ff3232 0%, #ffea30 50%, #ff0000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ff3232 0%,#ffea30 50%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ff3232 0%,#ffea30 50%,#ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    width: 300px;
+    height: 300px;
+
+    display: block;
+    margin: auto;
+
+}
+
+.half{
+
+    width: 100px;
+    height:100px;
+
+    display: block;
+    margin: auto;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3232+0,ffea30+52&1+0,0+52 */
+    background: -moz-linear-gradient(45deg,  rgba(255,50,50,1) 0%, rgba(255,234,48,0) 52%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(255,50,50,1) 0%,rgba(255,234,48,0) 52%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(255,50,50,1) 0%,rgba(255,234,48,0) 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#00ffea30',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#left{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    position: absolute;
+    top:50px;
+    left:60px;
+}
+
+#right{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    bottom:50px;
+    right:60px;
+}
+
+#blackout{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: none;
 }

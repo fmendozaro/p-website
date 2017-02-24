@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="css/circle.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" type="image/png" href=".images/favicon.png">
-
 </head>
 <body>
 
 <div id="overlay">
     <p id="close-overlay">X</p>
 </div>
+
+<div id="blackout"></div>
 
 <div id="nav-btn" class="menu-load">
     <p>Menu</p>
@@ -160,10 +161,25 @@
     </div>
 </div>
 
+<div id="psone">
+    <h1>Fer's</h1>
+    <div class="rombo">
+        <div id="left" class="half"></div>
+        <div id="right" class="half"></div>
+    </div>
+    <h2>Computer <br> Entertaiment</h2>
+</div>
+
+<audio class="audio" style="display: none;">
+    <source src="media/psx.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
 <script
         src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>
+<script src="js/psIntro.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

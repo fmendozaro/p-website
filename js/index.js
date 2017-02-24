@@ -1,15 +1,20 @@
 /**
  * Created by Fer on 11/4/16.
  */
+"use restrict";
+
 $(document).ready(function() {
 
+    //KONAMI CODE
     console.log("Try the konami kode");
-    var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
         n = 0;
     $(document).keydown(function (e) {
-        if (e.keyCode === k[n++]) {
-            if (n === k.length) {
+        if (e.keyCode === konamiCode[n++]) {
+            if (n === konamiCode.length) {
                 console.log('Konami !!!');
+                runIntro();
                 n = 0;
                 return false;
             }
@@ -54,9 +59,15 @@ $(document).ready(function() {
 
     $(document).keyup(function(e) {
         //ESC
+        console.log(e.keyCode);
         if (e.keyCode === 27){
-            closeOverlay();
+            //closeOverlay();
+            closeIntro();
         }
+        if(e.keyCode === 13){
+            runIntro();
+        }
+
     });
 
     $("#nav-btn").click( function () {
