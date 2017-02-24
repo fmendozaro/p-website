@@ -4,11 +4,12 @@
 "use restrict";
 
 var psOne = $("#psone");
+var blackout = $("#blackout");
 
 function runIntro(){
 
     //Audio play
-    $("#blackout").fadeIn();
+    blackout.fadeIn();
     $(".audio").trigger("play");
     psOne.css("background-color","white");
     psOne.fadeIn(2000);
@@ -17,5 +18,5 @@ function runIntro(){
 
 function closeIntro(){
     psOne.fadeOut();
-    $("#blackout").fadeOut();
+    blackout.fadeOut();
 }

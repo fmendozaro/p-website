@@ -5,29 +5,17 @@
 
 $(document).ready(function() {
 
-    //KONAMI CODE
     console.log("Try the konami kode");
-
-    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
-        n = 0;
-    $(document).keydown(function (e) {
-        if (e.keyCode === konamiCode[n++]) {
-            if (n === konamiCode.length) {
-                console.log('Konami !!!');
-                runIntro();
-                n = 0;
-                return false;
-            }
-        }
-        else {
-            n = 0;
-        }
-    });
 
     var pct = 0;
     var div_loading_progress = $(".div_loading_progress");
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
+    var konamiExecuted = false;
 
-    //Functions
+    // Execute right away
+    loadSkills();
+
+    //Functions for skills
 
     function update_pct(limit, el){
         pct++;
@@ -47,8 +35,6 @@ $(document).ready(function() {
         });
     }
 
-    loadSkills();
-
     function closeOverlay(){
         $("#overlay").fadeOut();
         $("#nav-btn").removeClass("menu-intro");
@@ -57,32 +43,42 @@ $(document).ready(function() {
 
     //Events
 
+    // KONAMI KODE
+    $(document).keydown(function (e) {
+        if (e.keyCode === konamiCode[n++]) {
+            if (n === konamiCode.length) {
+                console.log('Konami !!!');
+                konamiExecuted = true;
+                runIntro();
+                n = 0;
+                return false;
+            }
+        } else {
+            n = 0;
+        }
+    });
+
     $(document).keyup(function(e) {
         //ESC
         console.log(e.keyCode);
         if (e.keyCode === 27){
-            //closeOverlay();
+            if(!konamiExecuted){
+                closeOverlay();
+            }
+            konamiExecuted = false;
             closeIntro();
         }
-        if(e.keyCode === 13){
-            runIntro();
-        }
-
     });
 
     $("#nav-btn").click( function () {
-
        $("#overlay").fadeIn();
        $("#nav-btn").removeClass("menu-load");
        $("#nav-btn").removeClass("menu-outro");
        $("#nav-btn").addClass("menu-intro");
-
     });
 
     $("#close-overlay").click( function () {
-
        closeOverlay();
-
     });
 
 });
