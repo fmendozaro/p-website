@@ -1,47 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
-@keyframes nav-intro{
-    0%{
-        top:  -120px;
+@keyframes nav-intro {
+    0% {
+        top: -120px;
     }
-    100%{
-        top:  -60px;
+    100% {
+        top: -60px;
     }
 }
 
-@keyframes menu-intro-an{
-    from{
-        top:  -60px;
+@keyframes menu-intro-an {
+    from {
+        top: -60px;
     }
-    to{
+    to {
         top: 25%;
-        left:45%;
+        left: 45%;
         width: 250px;
         height: 250px;
     }
 }
 
-@keyframes menu-outro-an{
-    from{
-        top:  25%;
-        left:45%;
+@keyframes menu-outro-an {
+    from {
+        top: 25%;
+        left: 45%;
         width: 250px;
         height: 250px;
     }
-    to{
-        top:  -60px;
+    to {
+        top: -60px;
         width: 100px;
         height: 100px;
     }
 }
 
-body{
+body {
     background-color: #022f40;
-    color:white;
+    color: white;
     background: linear-gradient(rgb(0, 0, 0), rgba(18, 39, 55, 0.3)), url('../img/honey_im_subtle.png');
-    overflow: hidden;
 }
-#overlay{
+
+#overlay {
     position: fixed;
     top: 0;
     z-index: 999;
@@ -50,126 +50,118 @@ body{
     background: rgba(7, 23, 37, 0.9);
     display: none;
 }
-#close-overlay{
+
+#close-overlay {
     position: absolute;
-    right:50px;
+    right: 50px;
     font-size: xx-large;
     cursor: pointer;
 }
-#nav-btn{
+
+#nav-btn {
     position: fixed;
     top: -60px;
     left: 50%;
-    margin-left: -50px;.
-    border: 5px dotted white;
+    margin-left: -50px;
+. border: 5 px dotted white;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background-color: #1EAEDB;
+    background-color: #1e88e5;
     cursor: pointer;
     z-index: 999;
 }
 
-#nav-btn p{
-    padding-top: 60px;
-    color:black;
+#nav-btn p {
+    padding-top: 45px;
+    color: white;
     font-weight: bolder;
     font-size: larger;
     text-align: center;
     vertical-align: middle;
 }
 
-#navigation{
-    display: none;
-}
 
-#welcome{
+#welcome {
     background-color: #183446;
     height: 100vh;
-    background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255,.3)),
+    background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255, .3)),
     url('../img/simple_dashed.png');
+    color: black;
 }
 
-#welcome .row{
-    margin-top:100px;
+#profile-pic {
+    /*height: 300px;*/
+    /*width: 300px;*/
+    border: 5px solid #022f40;
 }
 
-.section{
-    padding:50px 0px;
-}
-
-#profile-pic{
-    width:300px;
-    height: 300px;
-    border: 5px solid white;
-    border-radius: 100%;
-}
-#contact input, textarea{
-    color:navy;
+#contact input, textarea {
+    color: navy;
     font-weight: bolder;
 }
-.value-multiplier{
-    color: #1EAEDB;
+
+.value-multiplier {
+    color: #1e88e5;
 }
-.div_loading_progress span{
+
+.div_loading_progress span {
     color: #022f40;
 }
 
-.menu-load{
+.menu-load {
     animation: nav-intro 0.5s 1;
     animation-timing-function: ease-out;
 }
 
-.menu-intro{
+.menu-intro {
     animation: menu-intro-an 1s 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-.menu-outro{
+.menu-outro {
     animation: menu-outro-an 1s 1;
     animation-timing-function: ease-out;
 }
 
-.hidden{
-    display: none;
-}
-
 #footer {
     position: fixed;
-    left:0px;
-    bottom:0px;
+    left: 0px;
+    bottom: 0px;
     height: auto;
     width: 100%;
 }
-#f-content{
+
+#f-content {
     border-radius: 55%;
-    position:relative;
-    width:50%;
+    position: relative;
+    width: 75%;
     margin: auto;
-    background:#0FA0CE;
-    height:500px;
-    bottom:-450px;
+    background: #1e88e5;
+    height: 500px;
+    bottom: -425px;
 }
-.social-icons{
+
+.social-icons {
     position: absolute;
-    top:-10px;
+    top: -10px;
     margin-left: 34%;
-    height:50px;
-    width:50px;
+    height: 50px;
+    width: 50px;
 }
 
-#icon-one{
-
+#icon-one {
 
 }
-#icon-two{
+
+#icon-two {
     margin-left: 20%;
 }
 
 /*PsOne Intro*/
 
-#psone{
+#psone {
     display: none;
     width: 100%;
     height: 100vh;
@@ -185,19 +177,19 @@ body{
 
 }
 
-#psone h1, h2{
+#psone h1, h2 {
     text-align: center;
-    padding:60px 0;
+    padding: 60px 0;
 }
 
-.rombo{
+.rombo {
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3232+0,ffea30+50,ff0000+100 */
     background: #ff3232; /* Old browsers */
-    background: -moz-linear-gradient(45deg,  #ff3232 0%, #ffea30 50%, #ff0000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg,  #ff3232 0%,#ffea30 50%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg,  #ff3232 0%,#ffea30 50%,#ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: -moz-linear-gradient(45deg, #ff3232 0%, #ffea30 50%, #ff0000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ff3232 0%, #ffea30 50%, #ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ff3232 0%, #ffea30 50%, #ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3232', endColorstr='#ff0000', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -213,45 +205,45 @@ body{
 
 }
 
-.half{
+.half {
 
     width: 100px;
-    height:100px;
+    height: 100px;
 
     display: block;
     margin: auto;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3232+0,ffea30+52&1+0,0+52 */
-    background: -moz-linear-gradient(45deg,  rgba(255,50,50,1) 0%, rgba(255,234,48,0) 52%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg,  rgba(255,50,50,1) 0%,rgba(255,234,48,0) 52%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg,  rgba(255,50,50,1) 0%,rgba(255,234,48,0) 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#00ffea30',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: -moz-linear-gradient(45deg, rgba(255, 50, 50, 1) 0%, rgba(255, 234, 48, 0) 52%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(255, 50, 50, 1) 0%, rgba(255, 234, 48, 0) 52%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(255, 50, 50, 1) 0%, rgba(255, 234, 48, 0) 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3232', endColorstr='#00ffea30', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 
 }
 
-#left{
+#left {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     position: absolute;
-    top:50px;
-    left:60px;
+    top: 50px;
+    left: 60px;
 }
 
-#right{
+#right {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     position: absolute;
-    bottom:50px;
-    right:60px;
+    bottom: 50px;
+    right: 60px;
 }
 
-#blackout{
+#blackout {
     position: fixed;
     top: 0;
     z-index: 1000;

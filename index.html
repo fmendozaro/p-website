@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fernando Mendoza Rodriguez personal website</title>
+    <title>Fernando Mendoza Rodriguez Website</title>
     <meta name="author" content="Fernando Mendoza Rodriguez">
     <title>Fernando Mendoza Rodriguez - Software Developer</title>
     <meta name="description"
           content="Online resume of the software engineer Fernando Mendoza Rodriguez, born in México and living currently in USA.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
     <link rel="stylesheet" href="css/circle.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" type="image/png" href=".images/favicon.png">
@@ -23,162 +29,190 @@
 
 <div id="blackout"></div>
 
-<div id="nav-btn" class="menu-load">
+<div id="nav-btn" class="menu-load hide-on-med-and-down">
     <p>Menu</p>
 </div>
 
-<div id="navigation">
-    <nav class="nav nav-bar">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+<!--Mobile-->
+<nav class="hide-on-large-only blue darken-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="#" class="subheader"><i class="material-icons">view_module</i>Sections</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="partials/about.html"><i class="material-icons">account_circle</i>About</a></li>
+            <li><a href="partials/experience.html"><i class="material-icons">timeline</i>Experience</a></li>
+            <li><a href="partials/portfolio.html"><i class="material-icons">list</i>Portfolio</a></li>
+            <li><a href="partials/contact.html"><i class="material-icons">contact_mail</i>Contact</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#" class="subheader"><i class="material-icons">http</i>External Links</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="https://github.com/fmendozaro"><i class="material-icons">link</i>LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-a7369123"><i class="material-icons">link</i>Github</a></li>
+            <li><a href="mailto:fernando.mendoza.ro@gmail.com"><i class="material-icons">mail</i>E-mail</a></li>
         </ul>
-    </nav>
-</div>
-
-<div id="welcome" class="section hero">
-    <div class="container">
-        <div class="row">
-            <div class="one-half column u-full-width">
-                <h2 class="hero-heading"> ¡Bienvenido! - Welcome! </h2>
-                <h5>Goals:</h5>
-                <p>Seeking jobs that improve my programming skills, help me to reach new
-                    professional achievements, extend and apply my knowledge as a software
-                    developer on an ongoing development as I learn new technologies.</p>
-            </div>
-            <div class="one-half">
-                <img id="profile-pic" class="phone" src="img/profile.png">
-            </div>
-        </div>
     </div>
-</div>
+</nav>
 
-<div class="section values hidden">
-    <div class="container">
-        <h2>About me</h2>
-        <div class="row">
-            <div class="one-third column value">
-                <h3 class="value-multiplier">Languages</h3>
-                <p class="value-heading">Spanish [Native]</p>
-                <p class="value-description">English [Fluent]</p>
-            </div>
-            <div class="one-third column value">
-                <h3 class="value-multiplier">Achievements</h3>
-                <p class="value-heading">16th place in Regional Zamora 2010 sponsored by IBM.</p>
-            </div>
-            <div class="one-third column value">
-                <h3 class="value-multiplier">Titles</h3>
-                <p class="value-heading">BS. in Systems engineering</p>
-                <p class="value-description">Professional License issued in México: 8416506</p>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container-fluid">
 
-
-<div class="section categories hidden">
-    <div class="container">
-        <h2 class="section-heading">Experience</h2>
-        <div class="row">
-            <div class="one-half column category">
-                <img class="u-max-full-width" src="img/bg2.jpg">
-                <h2 class="value-multiplier">Software Developer</h2>
-                <p>Web applications, SEO, Mobile responsive design, ERP development, Datamining, DBA.</p>
-            </div>
-
-            <div class="one-half column category">
-                <img class="u-max-full-width" src="img/bg1.jpg">
-                <h2 class="value-multiplier">Teacher</h2>
-                <p>4 years of teaching in the IT field, delivering content that includes the basic use of a computer to programming languages such as PHP, JAVA and VB, both in English and Spanish.</p>
-            </div>
-        </div>
-        <div class="row">
-            <h2 class="section-heading">Skills</h2>
-            <div class="container">
-
-                <div class="one-third column">
-                    <div class="c100 p0 div_loading_progress" data-val="90">
-                        <span>PHP</span>
-                        <div class="slice">
-                            <div class="bar"></div>
-                            <div class="fill"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="one-third column">
-                    <div class="c100 p0 div_loading_progress" data-val="60">
-                        <span>Java</span>
-                        <div class="slice">
-                            <div class="bar"></div>
-                            <div class="fill"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="one-third column">
-                    <div class="c100 p0 div_loading_progress" data-val="90">
-                        <span>MySQL</span>
-                        <div class="slice">
-                            <div class="bar"></div>
-                            <div class="fill"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="contact" class="section get-help hidden">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <div class="row">
-                <div class="six columns">
-                    <label for="exampleEmailInput">Your email</label>
-                    <input class="u-full-width" type="email" placeholder="example@domain.com" id="exampleEmailInput">
-                </div>
-                <div class="six columns">
-                    <label for="exampleRecipientInput">Reason for contacting</label>
-                    <input type="text" class="u-full-width" id="exampleRecipientInput" placeholder="Subject">
-                </div>
-            </div>
-            <label for="exampleMessage">Message</label>
-            <textarea class="u-full-width" placeholder="Howdy Fernando" id="exampleMessage"></textarea>
-            <input class="button-primary" type="submit" value="Submit">
-        </form>
-    </div>
-</div>
-
-<div id="footer">
     <div class="row">
-        <div class="container" id="f-content">
-            <a id="icon-one" href="https://github.com/fmendozaro" target="_blank"><img src="img/github.png" alt="Github" class="social-icons"></a>
-            <a id="icon-two" href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-a7369123" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" class="social-icons"></a>
+    <div id="welcome" class="col l12 m12 s12">
+        <div class="container">
+            <div class="row valign-wrapper card-panel lighten-3">
+                <div class="col l9 m9 s7">
+                    <div>
+                        <h2>¡Bienvenido! / Welcome!</h2>
+                        <h5>Professional Goals:</h5>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <p>Always looking forward to improve my programming skills, to work in places that helps me to reach new professional achievements, upgrade and apply my knowledge as a systems engineer focused in software development.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col l3 m3 s5">
+                    <img id="profile-pic" class="hoverable circle responsive-img" src="img/profile.png">
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="psone">
-    <h1>Fer's</h1>
-    <div class="rombo">
-        <div id="left" class="half"></div>
-        <div id="right" class="half"></div>
     </div>
-    <h2>Computer <br> Entertaiment</h2>
+
+    <div class="section values hide">
+        <div class="container">
+            <h2>About me</h2>
+            <div class="row">
+                <div class="one-third column value">
+                    <h3 class="value-multiplier">Languages</h3>
+                    <p class="value-heading">Spanish [Native]</p>
+                    <p class="value-description">English [Fluent]</p>
+                </div>
+                <div class="one-third column value">
+                    <h3 class="value-multiplier">Achievements</h3>
+                    <p class="value-heading">16th place in Regional Zamora 2010 sponsored by IBM.</p>
+                </div>
+                <div class="one-third column value">
+                    <h3 class="value-multiplier">Titles</h3>
+                    <p class="value-heading">BS. in Systems engineering</p>
+                    <p class="value-description">Professional License issued in México: 8416506</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section categories hide">
+        <div class="container">
+            <h2 class="section-heading">Experience</h2>
+            <div class="row">
+                <div class="one-half column category">
+                    <img class="u-max-full-width" src="img/bg2.jpg">
+                    <h2 class="value-multiplier">Software Developer</h2>
+                    <p>Web applications, SEO, Mobile responsive design, ERP development, Datamining, DBA.</p>
+                </div>
+
+                <div class="one-half column category">
+                    <img class="u-max-full-width" src="img/bg1.jpg">
+                    <h2 class="value-multiplier">Teacher</h2>
+                    <p>4 years of teaching in the IT field, delivering content that includes the basic use of a computer to programming languages such as PHP, JAVA and VB, both in English and Spanish.</p>
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="section-heading">Skills</h2>
+                <div class="container">
+
+                    <div class="one-third column">
+                        <div class="c100 p0 div_loading_progress" data-val="90">
+                            <span>PHP</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-third column">
+                        <div class="c100 p0 div_loading_progress" data-val="60">
+                            <span>Java</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-third column">
+                        <div class="c100 p0 div_loading_progress" data-val="90">
+                            <span>MySQL</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section hide">
+        <div class="container">
+            <div class="row">
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="exampleEmailInput">Your email</label>
+                            <input class="u-full-width" type="email" placeholder="example@domain.com" id="exampleEmailInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="exampleRecipientInput">Reason for contacting</label>
+                            <input type="text" class="u-full-width" id="exampleRecipientInput" placeholder="Subject">
+                        </div>
+                    </div>
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="u-full-width" placeholder="Howdy Fernando" id="exampleMessage"></textarea>
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="hide-on-med-and-down">
+        <div class="container">
+            <div class="row" id="f-content">
+                <a id="icon-one" href="https://github.com/fmendozaro" target="_blank"><img src="img/github.png" alt="Github" class="social-icons"></a>
+                <a id="icon-two" href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-a7369123" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" class="social-icons"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="psone">
+        <h1>Fer's</h1>
+        <div class="rombo">
+            <div id="left" class="half"></div>
+            <div id="right" class="half"></div>
+        </div>
+        <h2>Computer <br> Entertaiment</h2>
+    </div>
+<!--container-->
 </div>
 
-<audio class="audio" style="display: none;">
-    <source src="media/psx.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+    <audio class="audio" style="display: none;">
+        <source src="media/psx.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-<script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-<script src="js/psIntro.js"></script>
-<script src="js/index.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <script src="js/props.js"></script>
+    <script src="js/psIntro.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

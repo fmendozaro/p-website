@@ -7,6 +7,8 @@ $(document).ready(function() {
 
     console.log("Try the konami kode");
 
+    $(".button-collapse").sideNav();
+
     var pct = 0;
     var div_loading_progress = $(".div_loading_progress");
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
