@@ -8,6 +8,7 @@ $(document).ready(function() {
     console.log("Try the konami kode");
 
     $(".button-collapse").sideNav();
+    $('.modal').modal();
 
     var pct = 0;
     var div_loading_progress = $(".div_loading_progress");

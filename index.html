@@ -33,6 +33,15 @@
     <p>Menu</p>
 </div>
 
+<div id="psone">
+    <h1>Fer's</h1>
+    <div class="rombo">
+        <div id="left" class="half"></div>
+        <div id="right" class="half"></div>
+    </div>
+    <h2>Computer <br> Entertaiment</h2>
+</div>
+
 <!--Mobile-->
 <nav class="hide-on-large-only blue darken-1">
     <div class="nav-wrapper">
@@ -43,7 +52,7 @@
             <li><a href="partials/about.html"><i class="material-icons">account_circle</i>About</a></li>
             <li><a href="partials/experience.html"><i class="material-icons">timeline</i>Experience</a></li>
             <li><a href="partials/portfolio.html"><i class="material-icons">list</i>Portfolio</a></li>
-            <li><a href="partials/contact.html"><i class="material-icons">contact_mail</i>Contact</a></li>
+            <li><a href="#contact-modal"><i class="material-icons">contact_mail</i>Contact</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#" class="subheader"><i class="material-icons">http</i>External Links</a></li>
             <li><div class="divider"></div></li>
@@ -56,27 +65,32 @@
 
 <div class="container-fluid">
 
-    <div class="row">
-    <div id="welcome" class="col l12 m12 s12">
-        <div class="container">
-            <div class="row valign-wrapper card-panel lighten-3">
-                <div class="col l9 m9 s7">
-                    <div>
-                        <h2>¡Bienvenido! / Welcome!</h2>
-                        <h5>Professional Goals:</h5>
-                        <div class="divider"></div>
-                        <div class="section">
-                            <p>Always looking forward to improve my programming skills, to work in places that helps me to reach new professional achievements, upgrade and apply my knowledge as a systems engineer focused in software development.</p>
-                        </div>
+    <br class="hide-on-med-and-down">
+    <br class="hide-on-med-and-down">
+    <br class="hide-on-med-and-down">
+    <br class="hide-on-med-and-down">
+    <br class="hide-on-med-and-down">
 
+    <div class="row">
+        <div class="col l12 m12 s12">
+            <div class="container">
+                <div class="row valign-wrapper card-panel lighten-3">
+                    <div class="col l9 m9 s7">
+                        <div>
+                            <h2>¡Bienvenido! / Welcome!</h2>
+                            <h5>Professional Goals:</h5>
+                            <div class="divider"></div>
+                            <div class="section">
+                                <p>Always looking forward to improve my programming skills, to work in places that helps me to reach new professional achievements, upgrade and apply my knowledge as a systems engineer focused in software development.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col l3 m3 s5">
-                    <img id="profile-pic" class="hoverable circle responsive-img" src="img/profile.png">
+                    <div class="col l3 m3 s5">
+                        <img id="profile-pic" class="hoverable circle responsive-img" src="img/profile.png">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -155,26 +169,37 @@
         </div>
     </div>
 
-    <div id="contact" class="section hide">
-        <div class="container">
-            <div class="row">
-                <h2>Contact Me</h2>
-                <form action="#" method="post">
-                    <div class="row">
-                        <div class="six columns">
-                            <label for="exampleEmailInput">Your email</label>
-                            <input class="u-full-width" type="email" placeholder="example@domain.com" id="exampleEmailInput">
-                        </div>
-                        <div class="six columns">
-                            <label for="exampleRecipientInput">Reason for contacting</label>
-                            <input type="text" class="u-full-width" id="exampleRecipientInput" placeholder="Subject">
-                        </div>
-                    </div>
-                    <label for="exampleMessage">Message</label>
-                    <textarea class="u-full-width" placeholder="Howdy Fernando" id="exampleMessage"></textarea>
-                    <input class="button-primary" type="submit" value="Submit">
-                </form>
-            </div>
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <h4>Contact Me</h4>
+            <br>
+            <form action="#" method="POST" class="col l12 m12 s12">
+
+                <div class="input-field">
+                    <label for="name">Your Name</label>
+                    <input class="validate" type="text" id="name">
+                </div>
+
+                <div class="input-field">
+                    <label for="email">Your email</label>
+                    <input class="validate" type="email" id="email">
+                </div>
+
+                <div class="input-field">
+                    <label for="exampleRecipientInput">Subject</label>
+                    <input type="text" class="validate" id="exampleRecipientInput">
+                </div>
+
+                <div class="input-field">
+                    <label for="message">Message</label>
+                    <textarea class="materialize-textarea" id="message"></textarea>
+                </div>
+
+                <input class="btn blue darken-1" type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 
@@ -183,17 +208,9 @@
             <div class="row" id="f-content">
                 <a id="icon-one" href="https://github.com/fmendozaro" target="_blank"><img src="img/github.png" alt="Github" class="social-icons"></a>
                 <a id="icon-two" href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-a7369123" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" class="social-icons"></a>
+                <a id="icon-three" href="mailto:fernando.mendoza.ro@gmail.com"><img src="img/mail.png" alt="Mail" class="social-icons"></a>
             </div>
         </div>
-    </div>
-
-    <div id="psone">
-        <h1>Fer's</h1>
-        <div class="rombo">
-            <div id="left" class="half"></div>
-            <div id="right" class="half"></div>
-        </div>
-        <h2>Computer <br> Entertaiment</h2>
     </div>
 <!--container-->
 </div>
