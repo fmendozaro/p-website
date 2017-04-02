@@ -61,23 +61,31 @@ $(document).ready(function() {
         }
     });
 
-    $(document).keyup(function(e) {
-        //ESC
-        console.log(e.keyCode);
-        if (e.keyCode === 27){
-            if(!konamiExecuted){
-                closeOverlay();
-            }
-            konamiExecuted = false;
-            closeIntro();
-        }
-    });
+    // $(document).keyup(function(e) {
+    //     //ESC
+    //     console.log(e.keyCode);
+    //     if (e.keyCode === 27){
+    //         if(!konamiExecuted){
+    //             closeOverlay();
+    //         }
+    //         konamiExecuted = false;
+    //         closeIntro();
+    //     }
+    // });
 
     $("#nav-btn").click( function () {
-       $("#overlay").fadeIn();
-       $("#nav-btn").removeClass("menu-load");
-       $("#nav-btn").removeClass("menu-outro");
-       $("#nav-btn").addClass("menu-intro");
+       // $("#overlay").fadeIn();
+       // $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
+       // $('#nav-wrapper').removeClass("hide-on-large-only");
+        $('.button-collapse').sideNav('show');
+    });
+
+    $(".links").click( function (event) {
+        $('.button-collapse').sideNav('hide');
+        var content = $('#content');
+        var target = '#' + $(this).data('target');
+        $(target).removeClass('hide');
+        $(content).html($(target));
     });
 
     $("#close-overlay").click( function () {

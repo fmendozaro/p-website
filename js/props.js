@@ -5,7 +5,7 @@ var PROPS = {
     experience: {
         java: {
             years: 3,
-            skills: ["Java SE", "Spring Boot", "Hibernate", "Servlets", "JSP", "Thymeleaf"]
+            skills: ["Java SE, EE", "Spring Boot", "Hibernate", "Servlets", "JSP", "Thymeleaf"]
         },
         php:{
             years: 5,
