@@ -19,12 +19,15 @@
 
     <link rel="stylesheet" href="css/circle.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="icon" type="image/png" href=".images/favicon.png">
 </head>
 <body>
 
 <div id="overlay">
-    <p id="close-overlay">X</p>
+    <a href="#!" id="close-overlay" class="right btn-floating waves-effect waves-circle red">
+        <i class="material-icons">close</i>
+    </a>
 </div>
 
 <div id="blackout"></div>
@@ -44,14 +47,14 @@
 
 <!--Mobile-->
 <nav class="blue darken-1">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper main-menu">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#" class="subheader"><i class="material-icons">view_module</i>Sections</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#" class="links" data-target="about-me"><i class="material-icons">account_circle</i>About</a></li>
             <li><a href="#" class="links" data-target="experience"><i class="material-icons">timeline</i>Experience</a></li>
-            <li><a href="partials/portfolio.html"><i class="material-icons">list</i>Portfolio</a></li>
+            <!--<li><a href="partials/portfolio.html"><i class="material-icons">list</i>Portfolio</a></li>-->
             <li><a href="#contact-modal"><i class="material-icons">contact_mail</i>Contact</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#" class="subheader"><i class="material-icons">http</i>External Links</a></li>
@@ -65,9 +68,8 @@
 
 <div class="container-fluid">
 
-    <br class="hide-on-med-and-down">
-    <br class="hide-on-med-and-down">
-    <br class="hide-on-med-and-down">
+    <div class="row"></div>
+    <div class="row"></div>
 
     <div class="row">
         <div class="col l12 m12 s12">
@@ -144,8 +146,12 @@
 
     <div id="contact-modal" class="modal">
         <div class="modal-content">
-            <h4>Contact Me</h4>
-            <br>
+
+            <a href="#!" class="right btn-floating modal-action modal-close waves-effect waves-circle red">
+                <i class="material-icons">close</i>
+            </a>
+
+            <h5>Contact Me</h5>
             <form action="#" method="POST" class="col l12 m12 s12">
 
                 <div class="input-field">
@@ -168,11 +174,9 @@
                     <textarea class="materialize-textarea" id="message"></textarea>
                 </div>
 
-                <input class="btn blue darken-1" type="submit" value="Submit">
+                <input class="btn blue darken-1 waves-effect waves-light" type="submit" value="Submit">
+                <br>
             </form>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 

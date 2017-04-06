@@ -3,7 +3,7 @@
  */
 "use restrict";
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     console.log("Try the konami kode");
 
@@ -20,25 +20,25 @@ $(document).ready(function() {
 
     //Functions for skills
 
-    function update_pct(limit, el){
+    function update_pct(limit, el) {
         pct++;
         $(el).addClass("p" + pct);
         if (pct < limit) {
             //console.log(" loop" + pct);
-            setTimeout(update_pct(limit, $(el)),10);
-        }else{
+            setTimeout(update_pct(limit, $(el)), 10);
+        } else {
             pct = 0;
         }
     }
 
-    function loadSkills(){
-        div_loading_progress.each(function (){
+    function loadSkills() {
+        div_loading_progress.each(function () {
             var limit = $(this).data("val");
             update_pct(limit, $(this));
         });
     }
 
-    function closeOverlay(){
+    function closeOverlay() {
         $("#overlay").fadeOut();
         $("#nav-btn").removeClass("menu-intro");
         $("#nav-btn").addClass("menu-outro");
@@ -73,14 +73,14 @@ $(document).ready(function() {
     //     }
     // });
 
-    $("#nav-btn").click( function () {
-       // $("#overlay").fadeIn();
-       // $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
-       // $('#nav-wrapper').removeClass("hide-on-large-only");
-        $('.button-collapse').sideNav('show');
+    $("#nav-btn").click(function () {
+        $("#overlay").fadeIn();
+        $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
+        $('#nav-wrapper').removeClass("hide-on-large-only");
+        // $('.button-collapse').sideNav('show');
     });
 
-    $(".links").click( function (event) {
+    $(".links").click(function (event) {
         $('.button-collapse').sideNav('hide');
         var content = $('#content');
         var target = '#' + $(this).data('target');
@@ -88,8 +88,8 @@ $(document).ready(function() {
         $(content).html($(target));
     });
 
-    $("#close-overlay").click( function () {
-       closeOverlay();
+    $("#close-overlay").click(function () {
+        closeOverlay();
     });
 
 });

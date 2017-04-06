@@ -54,11 +54,8 @@ body {
 }
 
 #close-overlay {
-    position: absolute;
-    right: 50px;
-    font-size: xx-large;
-    cursor: pointer;
-    color:white;
+    margin-right: 25px;
+    margin-top: 10px;
 }
 
 #nav-btn {
