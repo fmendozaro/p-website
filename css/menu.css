@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {*/
 
 .main-menu {
     position: relative;
@@ -6,7 +6,7 @@
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    margin:50px auto;
+    margin: -180px -78px;
 }
 
 .main-menu ul {
@@ -21,6 +21,13 @@
     width: 180px;
     height: 180px;
     transform-origin: bottom right;
+    background-color: #1e88e5;
+    color: #FFF;
+    border: 1px solid white;
+}
+
+.main-menu li:hover {
+    background-color: #071725;
 }
 
 .main-menu li:nth-child(1) {
@@ -39,4 +46,25 @@
     transform: rotate(150deg) skew(30deg);
 }
 
+.main-menu li:nth-child(5) {
+    transform: rotate(210deg) skew(30deg);
 }
+
+.main-menu li:nth-child(6) {
+    transform: rotate(270deg) skew(30deg);
+}
+
+
+.main-menu li a {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: skew(-30deg) rotate(-60deg);
+    color: #fff;
+    font-family: 'Tahoma', 'sans-serif';
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+/*}*/

@@ -10,33 +10,9 @@ $(document).ready(function () {
     $(".button-collapse").sideNav();
     $('.modal').modal();
 
-    var pct = 0;
     var div_loading_progress = $(".div_loading_progress");
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
     var konamiExecuted = false;
-
-    // Execute right away
-    loadSkills();
-
-    //Functions for skills
-
-    function update_pct(limit, el) {
-        pct++;
-        $(el).addClass("p" + pct);
-        if (pct < limit) {
-            //console.log(" loop" + pct);
-            setTimeout(update_pct(limit, $(el)), 10);
-        } else {
-            pct = 0;
-        }
-    }
-
-    function loadSkills() {
-        div_loading_progress.each(function () {
-            var limit = $(this).data("val");
-            update_pct(limit, $(this));
-        });
-    }
 
     function closeOverlay() {
         $("#overlay").fadeOut();
@@ -75,6 +51,7 @@ $(document).ready(function () {
 
     $("#nav-btn").click(function () {
         $("#overlay").fadeIn();
+        $(".main-menu").removeClass("hide");
         $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
         $('#nav-wrapper').removeClass("hide-on-large-only");
         // $('.button-collapse').sideNav('show');
