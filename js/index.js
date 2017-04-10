@@ -26,8 +26,8 @@ $(document).ready(function () {
         $(".main-menu").animate({
             height: 0,
             width: 0,
-            top: '+=150px',
-            left: '+=170px'
+            top: '+=13%',
+            left: '+=12%'
         });
     }
 
@@ -71,7 +71,12 @@ $(document).ready(function () {
 
     $("#nav-btn").click(function () {
         $("#overlay").fadeIn();
-        growMenu();
+
+
+        setTimeout(function(){
+            growMenu();
+        }, 1000);
+
         $(".main-menu").fadeIn();
         $(".main-menu").removeClass("hide");
         $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
