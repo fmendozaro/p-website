@@ -1,12 +1,14 @@
 /*@media (max-width: 1024px) {*/
 
 .main-menu {
-    position: relative;
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    top: 14%;
+    left: 38%;
+    width: 0px;
+    height: 0px;
     border-radius: 50%;
     overflow: hidden;
-    margin: -180px -78px;
+    z-index:999;
 }
 
 .main-menu ul {
@@ -65,6 +67,5 @@
     font-size: 17px;
     text-decoration: none;
 }
-
 
 /*}*/

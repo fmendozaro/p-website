@@ -15,9 +15,29 @@ $(document).ready(function () {
     var konamiExecuted = false;
 
     function closeOverlay() {
+        shrinkMenu();
         $("#overlay").fadeOut();
         $("#nav-btn").removeClass("menu-intro");
         $("#nav-btn").addClass("menu-outro");
+        $(".main-menu").fadeOut("menu-outro");
+    }
+
+    function shrinkMenu(){
+        $(".main-menu").animate({
+            height: 0,
+            width: 0,
+            top: '+=150px',
+            left: '+=170px'
+        });
+    }
+
+    function growMenu(){
+        $(".main-menu").animate({
+            height: 300,
+            width: 300,
+            top: '14%',
+            left: '38%'
+        });
     }
 
     //Events
@@ -37,20 +57,22 @@ $(document).ready(function () {
         }
     });
 
-    // $(document).keyup(function(e) {
-    //     //ESC
-    //     console.log(e.keyCode);
-    //     if (e.keyCode === 27){
-    //         if(!konamiExecuted){
-    //             closeOverlay();
-    //         }
-    //         konamiExecuted = false;
-    //         closeIntro();
-    //     }
-    // });
+    $(document).keyup(function(e) {
+        //ESC
+        console.log(e.keyCode);
+        if (e.keyCode === 27){
+            if(!konamiExecuted){
+                closeOverlay();
+            }
+            konamiExecuted = false;
+            closeIntro();
+        }
+    });
 
     $("#nav-btn").click(function () {
         $("#overlay").fadeIn();
+        growMenu();
+        $(".main-menu").fadeIn();
         $(".main-menu").removeClass("hide");
         $("#nav-btn").removeClass("menu-load menu-outro").addClass("menu-intro");
         $("#nav-wrapper").removeClass("hide-on-large-only");
@@ -62,9 +84,8 @@ $(document).ready(function () {
         var content = $("#content");
         var targetText = "#" + $(this).data("target");
         var targetDiv = $(targetText);
-        console.log(targetDiv);
-        // $(targetDiv).removeClass("hide");
         $(content).html($(targetDiv).html());
+        closeOverlay();
     });
 
     $("#close-overlay").click(function () {

@@ -5,7 +5,7 @@
         top: -120px;
     }
     100% {
-        top: -60px;
+        top: -50px;
     }
 }
 
@@ -29,7 +29,7 @@
         height: 250px;
     }
     to {
-        top: -60px;
+        top: -50px;
         width: 100px;
         height: 100px;
     }
@@ -41,6 +41,10 @@ body {
     background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255, .3)),
     url('../img/simple_dashed.png');
     color: black;
+}
+
+#site-content{
+    margin-top: 80px;
 }
 
 #overlay {
@@ -60,7 +64,7 @@ body {
 
 #nav-btn {
     position: fixed;
-    top: -60px;
+    top: -50px;
     left: 50%;
     margin-left: -50px;
 .   border: 5 px dotted white;
@@ -69,14 +73,14 @@ body {
     height: 100px;
     background-color: #fcf9ff;
     cursor: pointer;
-    z-index: 999;
+    z-index: 1000;
 }
 
 #nav-btn p {
-    padding-top: 40%;
+    padding-top: 24%;
     color: black;
     font-weight: bolder;
-    font-size: larger;
+    font-size: 1.6em;
     text-align: center;
     vertical-align: middle;
 }
