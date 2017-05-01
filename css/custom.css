@@ -260,3 +260,13 @@ body {
 .description{
     font-weight: bold;
 }
+
+#about-me{
+    position: relative;
+}
+
+#glasses{
+    position: absolute;
+    top:-10px;
+    right:0;
+}

@@ -1,14 +1,13 @@
 /**
  * Created by Fer on 11/4/16.
  */
-"use restrict";
-
 $(document).ready(function () {
-
+    "use restrict";
     console.log("Try the konami kode");
 
     $(".button-collapse").sideNav();
     $(".modal").modal();
+    Materialize.fadeInImage('#content');
 
     var div_loading_progress = $(".div_loading_progress");
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
@@ -72,7 +71,6 @@ $(document).ready(function () {
     $("#nav-btn").click(function () {
         $("#overlay").fadeIn();
 
-
         setTimeout(function(){
             growMenu();
         }, 1000);
@@ -86,10 +84,11 @@ $(document).ready(function () {
 
     $(".links").click(function (event) {
         $(".button-collapse").sideNav("hide");
-        var content = $("#content");
+        var $content = $("#content");
         var targetText = "#" + $(this).data("target");
         var targetDiv = $(targetText);
-        $(content).html($(targetDiv).html());
+        $content.html($(targetDiv).html());
+        // Materialize.fadeInImage(content);
         closeOverlay();
     });
 
