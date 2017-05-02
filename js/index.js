@@ -88,6 +88,12 @@ $(document).ready(function () {
         var targetText = "#" + $(this).data("target");
         var targetDiv = $(targetText);
         $content.html($(targetDiv).html());
+
+        if(targetText == "#contact"){
+            console.log($(this).children("a"));
+            $(this).children("a")[0].click();
+        }
+
         // Materialize.fadeInImage(content);
         closeOverlay();
     });
