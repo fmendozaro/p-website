@@ -266,7 +266,14 @@ body {
 }
 
 #glasses{
-    float: right;
+    float: left;
     width:200px;
     height:100px;
+}
+
+#lap{
+    float: left;
+    width:200px;
+    height:auto;
+    margin-right: 20px;
 }
