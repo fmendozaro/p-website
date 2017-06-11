@@ -44,7 +44,7 @@ body {
 }
 
 #site-content{
-    margin-top: 80px;
+    margin: 80px 0;
 }
 
 #overlay {
@@ -131,11 +131,11 @@ body {
 #f-content {
     border-radius: 55%;
     position: relative;
-    width: 70%;
+    width: 100%;
     margin: auto;
-    background: #1e88e5;
+    background-image: url("/img/shattered.png"), linear-gradient(#2490eb, #090899);
     height: 500px;
-    bottom: -455px;
+    bottom: -435px;
 }
 
 .social-icons {
@@ -147,7 +147,7 @@ body {
 }
 
 #icon-one {
-    margin-left: -10%;
+    margin-left: -6%;
 }
 
 #icon-two {
@@ -276,4 +276,8 @@ body {
     width:200px;
     height:auto;
     margin-right: 20px;
+}
+
+.top-nav{
+    background-image: url("/img/shattered.png"), linear-gradient(#2490eb, #06004b);
 }
