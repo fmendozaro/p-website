@@ -25,17 +25,19 @@ $(document).ready(function () {
         $(".main-menu").animate({
             height: 0,
             width: 0,
-            top: '+=13%',
-            left: '+=12%'
+            top: '200px',
+            left: '50%'
         });
     }
 
     function growMenu(){
+        // Desktop & iPad
+        var width = (screen.width > 1024) ? "38%" : "35.5%";
         $(".main-menu").animate({
             height: 300,
             width: 300,
-            top: '68px',
-            left: '36%'
+            top: '80px',
+            left: width
         });
     }
 
