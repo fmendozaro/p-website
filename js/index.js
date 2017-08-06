@@ -34,8 +34,8 @@ $(document).ready(function () {
         $(".main-menu").animate({
             height: 300,
             width: 300,
-            top: '14%',
-            left: '38%'
+            top: '68px',
+            left: '36%'
         });
     }
 

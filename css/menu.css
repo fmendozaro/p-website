@@ -1,8 +1,12 @@
 /*@media (max-width: 1024px) {*/
 
+#menu-wrapper{
+    position: relative;
+}
+
 .main-menu {
     position: absolute;
-    top: 27%;
+    top: 50%;
     left: 50%;
     width: 0px;
     height: 0px;
@@ -60,8 +64,8 @@
 
 .main-menu li a {
     position: absolute;
-    top: 60%;
-    left: 45%;
+    top: 58%;
+    left: 48%;
     transform: skew(-30deg) rotate(-60deg);
     color: #fff;
     font-family: 'Tahoma', 'sans-serif';

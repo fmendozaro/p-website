@@ -23,7 +23,7 @@
 
 @keyframes menu-outro-an {
     from {
-        top: 25%;
+        top: 50%;
         left: 48%;
         width: 150px;
         height: 150px;
@@ -135,13 +135,13 @@ body {
     margin: auto;
     background-image: linear-gradient(#2490eb, #090899);
     height: 500px;
-    bottom: -435px;
+    bottom: -440px;
 }
 
 .social-icons {
     position: absolute;
     top: -15px;
-    margin-left: 34%;
+    margin-left: 32%;
     height: 50px;
     width: 50px;
 }
