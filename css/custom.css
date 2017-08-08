@@ -265,10 +265,12 @@ body {
     position: relative;
 }
 
-#glasses{
+#illustration{
     float: right;
-    width:20%;
+    width:30%;
     height:auto;
+    opacity: 0.9;
+    margin-top: -60px;
 }
 
 #lap{
