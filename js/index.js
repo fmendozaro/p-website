@@ -8,6 +8,8 @@ $(document).ready(function () {
     $(".button-collapse").sideNav();
     $(".modal").modal();
     Materialize.fadeInImage('#content');
+    $('.tap-target').tapTarget('open');
+    $('.tap-target').tapTarget('close');
 
     var div_loading_progress = $(".div_loading_progress");
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;

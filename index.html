@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
     <link rel="stylesheet" href="css/circle.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+<span id="top-target"></span>
 <!--Menu Overlay-->
 <div id="overlay">
     <a href="#!" id="close-overlay" class="right btn-floating waves-effect waves-circle red">
@@ -47,7 +47,7 @@
         <ul>
             <li class="links" data-target="about-me"><a href="#">About me</a></li>
             <li class="links" data-target="experience"><a href="#">Experience</a></li>
-            <li class="links" data-target="contact"><a href="#contact-modal">Contact</a></li>
+            <li class="links modal-trigger" data-target="contact"><a href="#contact-modal">Contact</a></li>
             <li><a href="mailto:fernando.mendoza.ro@gmail.com">Mail</a></li>
             <!--<li><a href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-a7369123"><i class="material-icons">link</i></a></li>-->
             <!--<li><a href="https://github.com/fmendozaro"><i class="material-icons">github</i></a></li>-->
@@ -76,7 +76,7 @@
             <li><a href="#" class="links" data-target="about-me"><i class="material-icons">account_circle</i>About</a></li>
             <li><a href="#" class="links" data-target="experience"><i class="material-icons">timeline</i>Experience</a></li>
             <!--<li><a href="partials/portfolio.html"><i class="material-icons">list</i>Portfolio</a></li>-->
-            <li><a href="#contact-modal"><i class="material-icons">contact_mail</i>Contact</a></li>
+            <li><a href="#contact-modal"><i class="material-icons modal-trigger">contact_mail</i>Contact</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#" class="subheader"><i class="material-icons">http</i>External Links</a></li>
             <li><div class="divider"></div></li>
@@ -216,7 +216,18 @@
             </div>
         </div>
     </div>
-<!--container-->
+
+    <a id="go-top" class="waves-effect waves-light blue darken-1 pulse btn btn-floating" href="#top-target"><i class="material-icons">arrow_upward</i></a>
+
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-activates="go-top">
+        <div class="tap-target-content">
+            <h5>Title</h5>
+            <p>A bunch of text</p>
+        </div>
+    </div>
+
+    <!--container-->
 
     <audio class="audio" style="display: none;">
         <source src="media/psx.mp3" type="audio/mpeg">
@@ -229,8 +240,7 @@
             crossorigin="anonymous"></script>
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script src="js/props.js"></script>
     <script src="js/psIntro.js"></script>
     <script src="js/index.js"></script>
