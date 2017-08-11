@@ -3,10 +3,10 @@
  */
 $(document).ready(function () {
     "use restrict";
-    console.log("Try the konami kode");
 
-    $(".button-collapse").sideNav();
+    console.log("Try the konami kode");
     $('.modal').modal();
+    $(".button-collapse").sideNav();
     Materialize.fadeInImage('#content');
     $('.tap-target').tapTarget('open');
     $('.tap-target').tapTarget('close');
@@ -91,11 +91,12 @@ $(document).ready(function () {
         var $content = $("#content");
         var targetText = "#" + $(this).data("target");
         var targetDiv = $(targetText);
-        $content.html($(targetDiv).html());
 
         if(targetText == "#contact"){
             console.log($(this).children("a"));
             $(this).children("a")[0].click();
+        }else{
+            $content.html($(targetDiv).html());
         }
 
         // Materialize.fadeInImage(content);
