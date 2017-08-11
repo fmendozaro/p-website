@@ -6,7 +6,7 @@ $(document).ready(function () {
     console.log("Try the konami kode");
 
     $(".button-collapse").sideNav();
-    $(".modal").modal();
+    $('.modal').modal();
     Materialize.fadeInImage('#content');
     $('.tap-target').tapTarget('open');
     $('.tap-target').tapTarget('close');
