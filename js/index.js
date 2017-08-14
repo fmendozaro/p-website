@@ -97,6 +97,7 @@ $(document).ready(function () {
             $(this).children("a")[0].click();
         }else{
             $content.html($(targetDiv).html());
+            Materialize.fadeInImage("#content");
         }
 
         // Materialize.fadeInImage(content);
