@@ -38,8 +38,7 @@
 body {
     background-color: #183446;
     height: 100vh;
-    background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255, .3)),
-    url('../img/simple_dashed.png');
+    background: linear-gradient(rgba(51, 170, 255, 0.3), rgba(51, 170, 255, .3)), url('../img/simple_dashed.png');
     color: black;
 }
 
@@ -291,4 +290,8 @@ body {
     position: fixed;
     bottom: 15px;
     right: 30px;
+}
+
+.card-title {
+    opacity: 0.8;
 }
