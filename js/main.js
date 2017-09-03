@@ -1,8 +1,9 @@
 /**
  * Created by Fer on 11/4/16.
  */
+"use strict";
+
 $(document).ready(function () {
-    "use restrict";
 
     console.log("Try the konami kode");
     $('.modal').modal();
