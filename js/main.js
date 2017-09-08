@@ -122,7 +122,7 @@ $(document).ready(function () {
             '        <p>' + el.description + '</p>\n' +
             '    </div>\n' +
             '    <div class="card-action blue-text text-darken-2">\n' +
-            '        <a class="btn waves-effect waves-white blue darken-1" href="' + el.url + '" target="_blank"><i class="material-icons right">link</i>' + el.url + '</a>\n' +
+            '        <a class="links" href="' + el.url + '" target="_blank">' + el.url + '</a>\n' +
             '    </div>\n' +
             '</div>';
     });
