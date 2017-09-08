@@ -115,7 +115,7 @@ $(document).ready(function () {
         cards += '<div class="card">\n' +
             '    <div class="card-image">\n' +
             '        <img src="' + el.imgUrl + '">\n' +
-            '        <span class="card-title blue-text text-darken-1 blue lighten-5">' + el.name + '</span>\n' +
+            '        <span class="card-title blue-text blue lighten-5"><strong>' + el.name + '</strong></span>\n' +
             '    </div>\n' +
             '    <div class="card-content">\n' +
             '        <p>' + el.description + '</p>\n' +

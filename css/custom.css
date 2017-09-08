@@ -298,7 +298,12 @@ body {
 }
 
 .card-title {
-    opacity: 0.7;
+    opacity: 0.8;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+    color: #2490eb;
+    text-transform: lowercase;
 }
 
 .links {
