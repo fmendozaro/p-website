@@ -292,6 +292,15 @@ body {
     right: 30px;
 }
 
+#logo {
+    width: 150px;
+    height: auto;
+}
+
 .card-title {
     opacity: 0.7;
+}
+
+.links {
+    color: black;
 }

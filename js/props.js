@@ -30,7 +30,7 @@ var PROPS = {
         },
         {
             "name": "Nelly Furtado Mexico",
-            "imgUrl": "./img/bg1.jpg",
+            "imgUrl": "./img/projects/nelly.png",
             "url": "http://nellyfurtado.com.mx",
             "description": "Website for the official mexican fan club for Nelly Furtado in Mexico."
         },

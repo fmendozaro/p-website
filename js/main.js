@@ -120,8 +120,8 @@ $(document).ready(function () {
             '    <div class="card-content">\n' +
             '        <p>' + el.description + '</p>\n' +
             '    </div>\n' +
-            '    <div class="card-action blue-text text-darken-1 ">\n' +
-            '        <a href="' + el.url + '" target="_blank">Link</a>\n' +
+            '    <div class="card-action blue-text text-darken-2">\n' +
+            '        <a class="links" href="' + el.url + '" target="_blank">' + el.url + '</a>\n' +
             '    </div>\n' +
             '</div>';
     });
