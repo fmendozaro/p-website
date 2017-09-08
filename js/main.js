@@ -9,6 +9,7 @@ $(document).ready(function () {
     $('.modal').modal();
     $(".button-collapse").sideNav();
     Materialize.fadeInImage("#content");
+    Materialize.fadeInImage('#logo')
     $('.tap-target').tapTarget("open").tapTarget("close");
 
     var div_loading_progress = $(".div_loading_progress");

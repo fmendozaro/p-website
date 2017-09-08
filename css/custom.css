@@ -304,6 +304,6 @@ body {
     text-transform: lowercase;
 }
 
-.links {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
     color: black;
 }
