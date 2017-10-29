@@ -107,6 +107,21 @@ $(document).ready(function () {
         closeOverlay();
     });
 
+    $("#send-email").click(function(e){
+       e.preventDefault();
+
+       $.ajax({
+           url: "/php/mailer.php",
+           method: "POST",
+           data: $(this).parent().serialize(),
+       }).done(function(msg){
+           $('#contact').modal('close');
+           $("#log").html( msg );
+       }).fail(function( jqXHR, textStatus ) {
+           alert("Request failed: " + textStatus);
+       });
+    });
+
     // Load projects section
 
     var cardsDiv = $("#cards");
