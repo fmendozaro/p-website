@@ -117,11 +117,11 @@ $(document).ready(function () {
            url: "/php/mailer.php",
            method: "POST",
            data: $(this).parent().serialize(),
-       }).done(function(msg){
+       }).done(function(data){
            $('#contact').modal('close');
-           Materialize.toast(msg, 4000);
-       }).fail(function( jqXHR, textStatus ) {
-           Materialize.toast("Request failed: " + textStatus, 4000);
+           Materialize.toast(data.msg, 4000);
+       }).fail(function( jqXHR, data ) {
+           Materialize.toast("Request failed: " + data.error, 4000);
        });
     });
 
