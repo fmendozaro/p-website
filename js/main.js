@@ -107,18 +107,21 @@ $(document).ready(function () {
         closeOverlay();
     });
 
+    $("#contact-form").submit(function(e){
+        e.preventDefault();
+    });
+
     $("#send-email").click(function(e){
        e.preventDefault();
-
        $.ajax({
            url: "/php/mailer.php",
            method: "POST",
            data: $(this).parent().serialize(),
        }).done(function(msg){
            $('#contact').modal('close');
-           $("#log").html( msg );
+           Materialize.toast(msg, 4000);
        }).fail(function( jqXHR, textStatus ) {
-           alert("Request failed: " + textStatus);
+           Materialize.toast("Request failed: " + textStatus, 4000);
        });
     });
 
