@@ -34,12 +34,13 @@ $(document).ready(function () {
 
     function growMenu(){
         // Desktop & iPad
-        var width = (screen.width > 1024) ? "38%" : "35.5%";
+        var width = (screen.width > 1024) ? "50%" : "35.5%";
         $(".main-menu").animate({
             height: 300,
             width: 300,
-            top: '80px',
-            left: width
+            top: '120px',
+            left: width,
+            marginLeft: '-150px'
         });
     }
 

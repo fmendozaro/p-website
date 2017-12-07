@@ -141,6 +141,8 @@ footer {
     height: 500px;
     margin: auto;
     background-image: linear-gradient(#2490eb, #090899);
+    right: 0px;
+    left: 0px;
 }
 
 .social-icons {
