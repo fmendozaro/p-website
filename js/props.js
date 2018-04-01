@@ -23,6 +23,12 @@ var PROPS = {
     },
     "projects": [
         {
+            "name": "Friends 4 prisoners",
+            "imgUrl": "./img/projects/f4p1.jpg",
+            "url": "https://friends4prisoners.com",
+            "description": "A pen pal web platform to connect prisoners seeking pen pals to correspond with. This project has a ERP system in the backend to manage all the data from the company."
+        },
+        {
             "name": "SA Taco Radar",
             "imgUrl": "./img/projects/taco.png",
             "url": "http://taco-radar.online",
