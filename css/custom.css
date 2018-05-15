@@ -11,10 +11,12 @@
 
 @keyframes menu-intro-an {
     from {
-        top: -7%;
+        top: -50px;
+        width: 100px;
+        height: 100px;
     }
     to {
-        top: 24%;
+        top: 43%;
         left: 48%;
         width: 150px;
         height: 150px;
@@ -23,13 +25,13 @@
 
 @keyframes menu-outro-an {
     from {
-        top: 50%;
+        top: 43%;
         left: 48%;
         width: 150px;
         height: 150px;
     }
     to {
-        top: -7%;
+        top: -50px;
         width: 100px;
         height: 100px;
     }
@@ -67,7 +69,6 @@ body {
     top: -50px;
     left: 50%;
     margin-left: -50px;
-. border: 5 px dotted white;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -118,6 +119,7 @@ body {
 .menu-outro {
     animation: menu-outro-an 1s 1;
     animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 footer {
     position: absolute;

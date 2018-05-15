@@ -23,24 +23,25 @@ $(document).ready(function () {
         $(".main-menu").fadeOut("menu-outro");
     }
 
+    var wFit = '43.5%';
+
     function shrinkMenu(){
         $(".main-menu").animate({
             height: 0,
             width: 0,
-            top: '200px',
-            left: '50%'
+            top: '35.5%',
+            left: wFit
         });
     }
 
     function growMenu(){
         // Desktop & iPad
-        var width = (screen.width > 1024) ? "50%" : "35.5%";
+        var width = (screen.width > 1024) ? wFit : "35.5%";
         $(".main-menu").animate({
             height: 300,
             width: 300,
-            top: '120px',
-            left: width,
-            marginLeft: '-150px'
+            top: '35.5%',
+            left: width
         });
     }
 
