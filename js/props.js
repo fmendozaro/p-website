@@ -31,14 +31,8 @@ var PROPS = {
         {
             "name": "SA Taco Radar",
             "imgUrl": "./img/projects/taco.png",
-            "url": "http://taco-radar.online",
+            "url": "http://tacos4.us",
             "description": "Taco Radar a place where you can find the nearest and finest real mexican flavored tacos in San Antonio, Texas. If you ever wonder how a real taco taste like, you can give it a shot and see for yourself."
-        },
-        {
-            "name": "Nelly Furtado Mexico",
-            "imgUrl": "./img/projects/nelly.png",
-            "url": "http://nellyfurtado.com.mx",
-            "description": "Website for the official mexican fan club for Nelly Furtado in Mexico."
         },
         {
             "name": "Loose Arts",
