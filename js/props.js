@@ -25,7 +25,7 @@ var PROPS = {
         {
             "name": "Frest",
             "imgUrl": "./img/projects/frest.png",
-            "url": "https://udacity-mws-1524959693928.firebaseapp.com/",
+            "url": "https://frest.tacos4.us",
             "description": "A progressive web app (PWA) developed while i was taking the Udacity's Nanodegree on Mobile Web Specialist."
         },
         {
