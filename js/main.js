@@ -23,7 +23,7 @@ $(document).ready(function () {
         $(".main-menu").fadeOut("menu-outro");
     }
 
-    var wFit = '43.5%';
+    var wFit = '42.5%';
 
     function shrinkMenu(){
         $(".main-menu").animate({

@@ -67,10 +67,10 @@
     position: absolute;
     top: 58%;
     left: 48%;
-    transform: skew(-30deg) rotate(-60deg);
+    transform: skew(-30deg) rotate(-57deg);
     color: #fff;
-    font-family: Verdana;
-    font-size: 17px;
+    font-family: Verdana, Arial;
+    font-size: 1rem;
     text-decoration: none;
 }
 /*}*/
