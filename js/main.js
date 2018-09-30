@@ -6,15 +6,18 @@
 $(document).ready(function () {
 
     console.log("Try the konami kode");
-    $('.modal').modal();
-    $(".button-collapse").sideNav();
-    Materialize.fadeInImage("#content");
-    Materialize.fadeInImage('#logo')
-    $('.tap-target').tapTarget("open").tapTarget("close");
 
     var div_loading_progress = $(".div_loading_progress");
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
     var konamiExecuted = false;
+    var cardsDiv = $("#cards");
+    var cards = "";
+
+    $('.modal').modal();
+    $(".button-collapse").sideNav();
+    Materialize.fadeInImage("#content");
+    Materialize.fadeInImage('#logo');
+    $('.tap-target').tapTarget("open").tapTarget("close");
 
     function closeOverlay() {
         shrinkMenu();
@@ -23,29 +26,31 @@ $(document).ready(function () {
         $(".main-menu").fadeOut("menu-outro");
     }
 
-    var wFit = '42.5%';
-
     function shrinkMenu(){
         $(".main-menu").animate({
             height: 0,
             width: 0,
-            top: '35.5%',
-            left: wFit
+            top: '50%',
+            left: '50%',
+            marginTop: '0px',
+            marginLeft: '0px'
         });
     }
 
     function growMenu(){
         // Desktop & iPad
-        var width = (screen.width > 1024) ? wFit : "35.5%";
+        // var width = (screen.width > 1024) ? wFit : "35.5%";
         $(".main-menu").animate({
             height: 300,
             width: 300,
-            top: '35.5%',
-            left: width
+            top: '50%',
+            left: '50%',
+            marginTop: '-150px',
+            marginLeft: '-150px'
         });
     }
 
-    //Events
+    // Event handlers
 
     // KONAMI KODE
     $(document).keydown(function (e) {
@@ -128,9 +133,6 @@ $(document).ready(function () {
     });
 
     // Load projects section
-
-    var cardsDiv = $("#cards");
-    var cards = "";
 
     PROPS.projects.forEach(function(el, i){
         cards += '<div class="card">\n' +

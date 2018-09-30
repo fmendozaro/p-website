@@ -16,19 +16,23 @@
         height: 100px;
     }
     to {
-        top: 43%;
-        left: 48%;
+        top: 50%;
+        left: 50%;
         width: 150px;
         height: 150px;
+        margin-top: -75px;
+        margin-left: -75px;
     }
 }
 
 @keyframes menu-outro-an {
     from {
-        top: 43%;
-        left: 48%;
+        top: 50%;
+        left: 50%;
         width: 150px;
         height: 150px;
+        margin-top: -75px;
+        margin-left: -75px;
     }
     to {
         top: -50px;
