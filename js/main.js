@@ -110,6 +110,8 @@ $(document).ready(function () {
         closeOverlay();
     });
 
+    $(".links").first().next().trigger('click');
+
     $("#close-overlay").click(function () {
         closeOverlay();
     });
