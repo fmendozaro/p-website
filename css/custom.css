@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
+body {
+    font-size: 1rem;
+}
+
 @keyframes nav-intro {
     0% {
         top: -20%;
@@ -271,7 +275,7 @@ footer {
 }
 
 .description {
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 #illustration {
