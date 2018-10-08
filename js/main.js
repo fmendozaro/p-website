@@ -110,7 +110,8 @@ $(document).ready(function () {
         closeOverlay();
     });
 
-    $(".links").first().next().trigger('click');
+    // Forces a link to a particular section
+    // $(".links").first().next().trigger('click');
 
     $("#close-overlay").click(function () {
         closeOverlay();
