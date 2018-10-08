@@ -2,25 +2,35 @@
  * Created by Fer on 3/11/17.
  */
 var PROPS = {
-    "experience": {
-        "java": {
-            "years": 3,
-            "skills": ["Java SE, EE", "Spring Boot", "Hibernate", "Servlets", "JSP", "Thymeleaf"]
+    "experience": [
+        {
+            "lang": "java",
+            "year": 2013,
+            "extras": ["Java SE", "Java EE", "Spring Boot", "Hibernate", "Servlets", "JSP", "JSTL", "Thymeleaf", "EL"]
         },
-        "php": {
-            "years": 5,
-            "skills": ["Codeigniter", "Laravel"]
+        {
+            "lang": "javascript",
+            "extras": ["node.js", "npm", "webpack", "jQuery", "angular"],
+            "year": 2014
         },
-        "mysql": {
-            "years": 8
+        {
+            "lang": "php",
+            "year": 2013,
+            "extras": ["Codeigniter", "Laravel"]
         },
-        "sqlserver": {
-            "years": 2
+        {
+            "lang": "mysql",
+            "year": 2013
         },
-        "grails": {
-            "years": 1
+        {
+            "lang": "sql server",
+            "year": 2015
+        },
+        {
+            "lang": "grails",
+            "year": 2016
         }
-    },
+    ],
     "projects": [
         {
             "name": "Frest",

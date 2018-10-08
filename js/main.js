@@ -153,4 +153,15 @@ $(document).ready(function () {
 
     cardsDiv.append(cards);
 
+    var shuffled = PROPS.experience
+        .map((a) => ({sort: Math.random(), value: a}))
+        .sort((a, b) => a.sort - b.sort)
+        .map((a) => a.value);
+
+    shuffled.forEach(function(e){
+        var lang = e.lang.toUpperCase();
+        var years = (new Date()).getFullYear() - e.year;
+        $('.experience-hub').append(`<span class="letter" data-letter="${lang}">${lang}<i class="years-exp">${years}</i></span>`);
+    });
+
 });
