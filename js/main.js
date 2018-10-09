@@ -162,7 +162,7 @@ $(document).ready(function () {
     shuffled.forEach(function(e){
         var lang = e.lang.toUpperCase();
         var years = (new Date()).getFullYear() - e.year;
-        $('.experience-hub').append(`<span class="letter" data-letter="${lang}">${lang}<i class="years-exp">${years}</i></span>`);
+        $('.experience-hub').append(`<span class="letter" data-letter="${lang}">${lang}</span>`);
     });
 
 });
