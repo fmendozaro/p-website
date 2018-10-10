@@ -6,7 +6,7 @@ var PROPS = {
         {
             "lang": "java",
             "year": 2013,
-            "extras": ["Java SE", "Java EE", "Spring Boot", "Hibernate", "Servlets", "JSP", "JSTL", "Thymeleaf", "EL"]
+            "extras": ["Java SE", "Java EE", "Spring Boot", "Hibernate", "Servlets", "JSP", "JSTL", "Thymeleaf", "EL", "Tomcat"]
         },
         {
             "lang": "javascript",
