@@ -325,3 +325,9 @@ footer {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
     color: black;
 }
+
+.cohort {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
