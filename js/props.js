@@ -56,5 +56,9 @@ var PROPS = {
             "url": "http://loosearts.com",
             "description": "A project made with one of my best friends to gather our freelance work between Mexico and Saudi Arabia."
         }
-    ]
+    ],
+    "generalExp": {
+        "dev": 2011,
+        "teach": 2012
+    }
 };

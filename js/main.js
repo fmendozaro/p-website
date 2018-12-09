@@ -12,6 +12,7 @@ $(document).ready(function () {
     var konamiExecuted = false;
     var cardsDiv = $("#cards");
     var cards = "";
+    var today = new Date();
 
     $('.modal').modal();
     $(".button-collapse").sideNav();
@@ -164,5 +165,8 @@ $(document).ready(function () {
         var years = (new Date()).getFullYear() - e.year;
         $('.experience-hub').append(`<span class="letter" data-letter="${lang}">${lang}</span>`);
     });
+
+    $('#dev-exp').text(today.getFullYear() - PROPS.generalExp.dev);
+    $('#teach-exp').text(today.getFullYear() - PROPS.generalExp.teach);
 
 });
