@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>FD</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"></link>
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Playball');
         body {
             background-color: #FEE8B9;
             background-image: url('../img/poke-bg.png');
-            background-size: auto;
+            background-size: cover;
             background-repeat:no-repeat;
-            border: 0;
+            background-position: right;
+            font-family: 'Playball', cursive;
+            font-size: 1rem;
+            height: 100%;
             margin: 0;
-            font-family: Zapfino;
+            padding: 0;
         }
 
         #label {
@@ -27,6 +33,7 @@
             align-items: center;
             justify-content: center;
             margin: 10px auto;
+            margin-top: 200px;
         }
 
         .hug {
@@ -46,39 +53,50 @@
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
         }
+        .info:nth-child(3) {
+            -moz-transform: scaleX(0);
+            -o-transform: scaleX(1);
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
     </style>
 </head>
 <body>
 
 <div id="hugContainer">
-    <h4 id="label"></h4>
-    <div class="hug" id="daniel"></div>
-    <div class="hug" id="fer"></div>
+    <h2 id="label"></h2>
+    <div class="hug" id="daniel"><span class="info"></span></div>
+    <div class="hug" id="fer"><span class="info"></span></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     (function(){
-        let ferReturn = moment('2019-01-04 19:45:00');
+        // let ferReturn = moment('2019-01-04 19:45:00');
+        let ferReturn = moment('2018-12-18 10:35:00');
         let ferObj = $('#fer');
         let danObj = $('#daniel');
         let mins = ferReturn.diff(moment(), 'minutes');
-        ferObj.css('right', `${42 / mins}%`);
-        danObj.css('left', `${42 / mins}%`);
+        let wW = window.innerWidth;
+        ferObj.css('right', `${(0.42 * wW) / (mins*60)}%`);
+        danObj.css('left', `${(0.42 * wW) / (mins*60)}%`);
         let timer = setInterval( () => {
             let days = ferReturn.diff(moment(), 'days');
             let hours = ferReturn.diff(moment(), 'hours');
             mins = ferReturn.diff(moment(), 'minutes');
             let secs = ferReturn.diff(moment(), 'seconds');
-            let absolutePos = 42 / mins;
+            let absolutePos = (0.42 * wW) / secs;
+            console.log(`Daniel left: ${danObj.css('left')}`);
+            console.log(`Fer right: ${ferObj.css('right')}`);
             $('#label').text(`We will be able to hug each other in: ${days} days ${hours} hours ${mins} minutes ${secs} seconds`);
+            if(secs < 1){
+                clearInterval(timer);
+                return false;
+            }
             ferObj.animate({ "right": `+=${absolutePos}%` });
             danObj.animate({ "left": `+=${absolutePos}%` });
             //42 25972 / 60
-            if(mins < 1){
-                clearInterval(timer);
-            }
         }, 1000);
     })();
 </script>
