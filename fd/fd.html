@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>FD</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"></link>
     <style>
         body {
             background-color: #FEE8B9;
             background-image: url('../img/poke-bg.png');
             background-size: auto;
+            background-repeat:no-repeat;
             border: 0;
             margin: 0;
+            font-family: Zapfino;
+        }
+
+        #label {
+            line-height: 50px;
+            text-align: center;
         }
 
         #hugContainer {
@@ -18,24 +26,21 @@
             position: relative;
             align-items: center;
             justify-content: center;
-            margin: 0 auto;
+            margin: 10px auto;
         }
 
         .hug {
-            width: 120px;
-            height: 90px;
+            width: 200px;
+            height: 100px;
             background-image: url('../img/hug.png');
             background-size: contain;
             position: absolute;
-            top: 100px;
+            top: 200px;
+            border-style: none;
+            border: none;
+            background-repeat:no-repeat;
         }
-
-        #daniel {
-            left: 0;
-        }
-
         #fer {
-            right: 0;
             -moz-transform: scaleX(-1);
             -o-transform: scaleX(-1);
             -webkit-transform: scaleX(-1);
@@ -46,9 +51,9 @@
 <body>
 
 <div id="hugContainer">
-    <h1 id="label"></h1>
-    <img class="hug" id="daniel"/>
-    <img class="hug" id="fer"/>
+    <h4 id="label"></h4>
+    <div class="hug" id="daniel"></div>
+    <div class="hug" id="fer"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
@@ -58,14 +63,20 @@
         let ferReturn = moment('2019-01-04 19:45:00');
         let ferObj = $('#fer');
         let danObj = $('#daniel');
+        let mins = ferReturn.diff(moment(), 'minutes');
+        ferObj.css('right', `${42 / mins}%`);
+        danObj.css('left', `${42 / mins}%`);
         let timer = setInterval( () => {
-            let timeLeft = moment.unix(ferReturn.unix() - moment().unix());
-            $('#label').text(`We will be able to hug each other in: ${timeLeft.days()} days ${timeLeft.hours()} hours ${timeLeft.minutes()} minutes ${timeLeft.seconds()} seconds`);
-
-            ferObj.animate({ "right": "+=1%" });
-            danObj.animate({ "left": "+=1%" });
-            //42
-            if(timeLeft == 0){
+            let days = ferReturn.diff(moment(), 'days');
+            let hours = ferReturn.diff(moment(), 'hours');
+            mins = ferReturn.diff(moment(), 'minutes');
+            let secs = ferReturn.diff(moment(), 'seconds');
+            let absolutePos = 42 / mins;
+            $('#label').text(`We will be able to hug each other in: ${days} days ${hours} hours ${mins} minutes ${secs} seconds`);
+            ferObj.animate({ "right": `+=${absolutePos}%` });
+            danObj.animate({ "left": `+=${absolutePos}%` });
+            //42 25972 / 60
+            if(mins < 1){
                 clearInterval(timer);
             }
         }, 1000);
