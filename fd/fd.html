@@ -74,30 +74,43 @@
 <script>
     (function(){
         // let ferReturn = moment('2019-01-04 19:45:00');
-        let ferReturn = moment('2018-12-18 10:35:00');
+        let ferReturn = moment('2018-12-21 14:36:00');
+        let timer= null;
         let ferObj = $('#fer');
         let danObj = $('#daniel');
         let mins = ferReturn.diff(moment(), 'minutes');
         let wW = window.innerWidth;
-        ferObj.css('right', `${(0.42 * wW) / (mins*60)}%`);
-        danObj.css('left', `${(0.42 * wW) / (mins*60)}%`);
-        let timer = setInterval( () => {
+        console.log(wW);
+        let secs = ferReturn.diff(moment(), 'seconds');
+        console.log(secs);
+        stop(secs, timer);
+        ferObj.css('right', `${(0.30 * wW) / (secs)}%`);
+        danObj.css('left', `${(0.30 * wW) / (secs)}%`);
+        timer = setInterval( () => {
             let days = ferReturn.diff(moment(), 'days');
             let hours = ferReturn.diff(moment(), 'hours');
             mins = ferReturn.diff(moment(), 'minutes');
-            let secs = ferReturn.diff(moment(), 'seconds');
-            let absolutePos = (0.42 * wW) / secs;
+            secs = ferReturn.diff(moment(), 'seconds');
+            let absolutePos = (0.30 * wW) / secs;
             console.log(`Daniel left: ${danObj.css('left')}`);
             console.log(`Fer right: ${ferObj.css('right')}`);
+            stop(secs, timer);
             $('#label').text(`We will be able to hug each other in: ${days} days ${hours} hours ${mins} minutes ${secs} seconds`);
-            if(secs < 1){
+            ferObj.css( "right", `${absolutePos}px`);
+            danObj.css( "left", `${absolutePos}px`);
+            // //42 25972 / 60
+        }, 1000);
+
+        function stop(secs, timer){
+            if(secs < 3){
                 clearInterval(timer);
+                $('#label').text('Cuddle time!');
+                // ferObj.css('right', `30%`);
+                // danObj.css('left', `30%`);
                 return false;
             }
-            ferObj.animate({ "right": `+=${absolutePos}%` });
-            danObj.animate({ "left": `+=${absolutePos}%` });
-            //42 25972 / 60
-        }, 1000);
+        }
+
     })();
 </script>
 
