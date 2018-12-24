@@ -74,42 +74,53 @@
 <script>
     (function(){
         // let ferReturn = moment('2019-01-04 19:45:00');
-        let ferReturn = moment('2018-12-21 14:36:00');
+        let ferReturn = moment('2018-12-24 15:38:00');
         let timer= null;
         let ferObj = $('#fer');
         let danObj = $('#daniel');
         let mins = ferReturn.diff(moment(), 'minutes');
         let wW = window.innerWidth;
-        console.log(wW);
         let secs = ferReturn.diff(moment(), 'seconds');
-        console.log(secs);
-        stop(secs, timer);
-        ferObj.css('right', `${(0.30 * wW) / (secs)}%`);
-        danObj.css('left', `${(0.30 * wW) / (secs)}%`);
+        console.log('window w',wW);
+        if(secs < 1){
+            clearInterval(timer);
+            $('#label').text('Cuddle time!');
+            return false;
+        }
+
+        let size = 0.2;
+        switch(wW){
+            case 640:
+                size = 0.25;
+                break;
+            case 853:
+                size = 0.3;
+                break;
+            case 1280:
+                size = 0.35;
+                break;
+        }
+
+        ferObj.css('right', `${(size * wW) / (secs)}px`);
+        danObj.css('left', `${(size * wW) / (secs)}px`);
         timer = setInterval( () => {
+            console.log('secs left',secs);
             let days = ferReturn.diff(moment(), 'days');
             let hours = ferReturn.diff(moment(), 'hours');
             mins = ferReturn.diff(moment(), 'minutes');
             secs = ferReturn.diff(moment(), 'seconds');
-            let absolutePos = (0.30 * wW) / secs;
+            let absolutePos = (size * wW) / secs;
             console.log(`Daniel left: ${danObj.css('left')}`);
             console.log(`Fer right: ${ferObj.css('right')}`);
-            stop(secs, timer);
+            if(secs < 1){
+                clearInterval(timer);
+                $('#label').text('Cuddle time!');
+                return false;
+            }
             $('#label').text(`We will be able to hug each other in: ${days} days ${hours} hours ${mins} minutes ${secs} seconds`);
             ferObj.css( "right", `${absolutePos}px`);
             danObj.css( "left", `${absolutePos}px`);
-            // //42 25972 / 60
         }, 1000);
-
-        function stop(secs, timer){
-            if(secs < 3){
-                clearInterval(timer);
-                $('#label').text('Cuddle time!');
-                // ferObj.css('right', `30%`);
-                // danObj.css('left', `30%`);
-                return false;
-            }
-        }
 
     })();
 </script>
