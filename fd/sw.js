@@ -1,8 +1,7 @@
 let CACHE_NAME = 'fd-v1';
 let urlsToCache = [
     '/',
-    '/manifest.json',
-    '/fd.html'
+    'manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
