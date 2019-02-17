@@ -11,8 +11,9 @@ $(document).ready(function () {
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
     var konamiExecuted = false;
     var cardsDiv = $("#cards");
-    var cards = "";
+    var cards, imgsHTML = "";
     var today = new Date();
+    var slideShow = $('#slideshow');
 
     $('.modal').modal();
     $(".button-collapse").sideNav();
@@ -168,5 +169,12 @@ $(document).ready(function () {
 
     $('#dev-exp').text(today.getFullYear() - PROPS.generalExp.dev);
     $('#teach-exp').text(today.getFullYear() - PROPS.generalExp.teach);
+
+    // Load the cohorts
+
+    PROPS.cohorts.forEach( function(e, i){
+        imgsHTML += `<img class="cohort responsive-img" src="img/cohorts/${e}">`;
+    });
+    slideShow.append(imgsHTML);
 
 });

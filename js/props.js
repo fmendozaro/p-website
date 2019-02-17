@@ -60,5 +60,10 @@ var PROPS = {
     "generalExp": {
         "dev": 2011,
         "teach": 2012
-    }
+    },
+    "cohorts": [
+        'lassen.jpg',
+        'wrangell.jpg',
+        'xanadu.jpg'
+    ]
 };
