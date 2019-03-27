@@ -11,7 +11,7 @@ $(document).ready(function () {
     var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
     var konamiExecuted = false;
     var cardsDiv = $("#cards");
-    var cards, imgsHTML = "";
+    var cards = "", imgsHTML = "";
     var today = new Date();
     var slideShow = $('#slideshow');
 
