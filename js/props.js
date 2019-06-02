@@ -33,6 +33,12 @@ var PROPS = {
     ],
     "projects": [
         {
+            "name": "PoGoFindMe",
+            "imgUrl": "./img/projects/pogofindme.png",
+            "url": "https://pogofind.me",
+            "description": "A progressive web app (PWA) for Pokémon Go players so they able to find each other just by using their public nicknames."
+        },
+        {
             "name": "Frest",
             "imgUrl": "./img/projects/frest.png",
             "url": "https://frest.tacos4.us",
