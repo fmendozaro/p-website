@@ -58,7 +58,7 @@ var PROPS = {
         },
         {
             "name": "Spring Blog",
-            "imgUrl": "./img/projects/blog.png",
+            "imgUrl": "./img/projects/blog.jpg",
             "url": "http://blog.fer-mendoza.com",
             "description": "A full-stack web application that servers as a blog made with Spring Boot for Codeup students."
         },
