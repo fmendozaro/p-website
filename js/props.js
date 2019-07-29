@@ -41,7 +41,7 @@ var PROPS = {
         {
             "name": "Frest",
             "imgUrl": "./img/projects/frest.png",
-            "url": "https://frest.tacos4.us",
+            "url": "https://frest.fer-mendoza.com",
             "description": "A progressive web app (PWA) developed while i was taking the Udacity's Nanodegree on Mobile Web Specialist."
         },
         {
@@ -53,8 +53,14 @@ var PROPS = {
         {
             "name": "SA Taco Radar",
             "imgUrl": "./img/projects/taco.png",
-            "url": "http://tacos4.us",
+            "url": "http://tacos.fer-mendoza.com",
             "description": "Taco Radar a place where you can find the nearest and finest real mexican flavored tacos in San Antonio, Texas. If you ever wonder how a real taco taste like, you can give it a shot and see for yourself."
+        },
+        {
+            "name": "Spring Blog",
+            "imgUrl": "./img/projects/blog.png",
+            "url": "http://blog.fer-mendoza.com",
+            "description": "A full-stack web application that servers as a blog made with Spring Boot for Codeup students."
         },
         {
             "name": "Loose Arts",
