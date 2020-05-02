@@ -33,6 +33,12 @@ var PROPS = {
     ],
     "projects": [
         {
+            "name": "FerMDB",
+            "imgUrl": "./img/projects/fmdb.png",
+            "url": "https://play.google.com/store/apps/details?id=com.fer_mendoza.fermdb",
+            "description": "A simple movie data base app to manage favorites and check the latest trailers made on Android"
+        },
+        {
             "name": "PoGoFindMe",
             "imgUrl": "./img/projects/pogofindme.png",
             "url": "https://pogofind.me",
