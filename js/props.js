@@ -39,16 +39,16 @@ var PROPS = {
             "description": "A simple movie data base app to manage favorites and check the latest trailers made on Android"
         },
         {
-            "name": "PoGoFindMe",
+            "name": "Pokemon Go Find Me",
             "imgUrl": "./img/projects/pogofindme.png",
-            "url": "https://pogofind.me",
+            "url": "https://pogofind.com",
             "description": "A progressive web app (PWA) for Pokémon Go players to facilitate the ability to find each other just by using their public nicknames, coordinate lucky trades, raids, etc."
         },
         {
             "name": "Frest",
             "imgUrl": "./img/projects/frest.png",
             "url": "https://frest.fer-mendoza.com",
-            "description": "A progressive web app (PWA) developed while i was taking the Udacity's Nanodegree on Mobile Web Specialist."
+            "description": "A progressive web app (PWA) developed built while taking the Mobile Web Specialist certification. This an app that offers the ability to add reviews and favorite restaurants using several front end technologies such as service workers and IndexedDB API"
         },
         {
             "name": "Friends 4 prisoners",
