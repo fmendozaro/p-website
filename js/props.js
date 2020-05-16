@@ -67,12 +67,6 @@ var PROPS = {
             "imgUrl": "./img/projects/blog.jpg",
             "url": "http://blog.fer-mendoza.com",
             "description": "A full-stack web application that servers as a blog made with Spring Boot for Codeup students."
-        },
-        {
-            "name": "Loose Arts",
-            "imgUrl": "./img/projects/la.png",
-            "url": "http://loosearts.com",
-            "description": "A project made with one of my best friends to gather our freelance work between Mexico and Saudi Arabia."
         }
     ],
     "generalExp": {
