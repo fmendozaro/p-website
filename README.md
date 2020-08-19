@@ -1,12 +1,12 @@
 # Personal website
 
-My personal website includes some of the following technologies:
+My personal website includes the following technologies/libs:
 
-- MaterializeCSS
+- Materialize CSS
 - jQuery
 - Composer
 - Vanilla Javascript.
 
 ## Features 
 
-- Konami Code
+- Hidden Konami Code

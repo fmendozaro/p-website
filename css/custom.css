@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
     font-size: 1rem;
@@ -52,9 +53,8 @@ body {
     color: black;
 }
 
-#content {
-    margin: 50px 0 70px 0;
-    position: relative;
+.page-title {
+    font-family: 'Righteous', cursive;
 }
 
 #overlay {
@@ -315,6 +315,7 @@ footer {
 
 .card-title {
     opacity: 0.8;
+    background-color: black !important;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){

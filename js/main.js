@@ -16,7 +16,7 @@ $(document).ready(function () {
     var slideShow = $('#slideshow');
 
     $('.modal').modal();
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({edge: "right"});
     Materialize.fadeInImage("#content");
     Materialize.fadeInImage('#logo');
     $('.tap-target').tapTarget("open").tapTarget("close");
@@ -138,20 +138,20 @@ $(document).ready(function () {
     });
 
     // Load projects section
-
     PROPS.projects.forEach(function(el, i){
-        cards += '<div class="card">\n' +
-            '    <div class="card-image">\n' +
-            '        <img src="' + el.imgUrl + '">\n' +
-            '        <span class="card-title blue-text blue lighten-5"><strong>' + el.name + '</strong></span>\n' +
-            '    </div>\n' +
-            '    <div class="card-content">\n' +
-            '        <p>' + el.description + '</p>\n' +
-            '    </div>\n' +
-            '    <div class="card-action blue-text text-darken-2">\n' +
-            '        <a class="links" href="' + el.url + '" target="_blank">' + el.url + '</a>\n' +
-            '    </div>\n' +
-            '</div>';
+        cards += `<div class="card">
+                <div class="card-image">
+                    <img src="${el.imgUrl}">
+                    <span class="card-title blue-text blue lighten-5"><strong>${el.name}</strong></span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light light-blue" href="${el.url}" target="_blank"><i class="material-icons">language</i></a>
+                </div>
+                <div class="card-content light-blue lighten-5">
+                    <p>${el.description}</p>
+                </div>
+                <div class="card-action blue-text text-darken-2">
+                    <a class="links" href="${el.url}" target="_blank">${el.url}</a>
+                </div>
+            </div>`;
     });
 
     cardsDiv.append(cards);

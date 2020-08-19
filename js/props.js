@@ -1,7 +1,7 @@
 /**
  * Created by Fer on 3/11/17.
  */
-var PROPS = {
+const PROPS = {
     "experience": [
         {
             "lang": "java",
@@ -11,7 +11,7 @@ var PROPS = {
         {
             "lang": "javascript",
             "extras": ["node.js", "npm", "webpack", "jQuery", "angular"],
-            "year": 2014
+            "year": 2012
         },
         {
             "lang": "php",
@@ -33,13 +33,19 @@ var PROPS = {
     ],
     "projects": [
         {
+            "name": "OnlyFlans",
+            "imgUrl": "./img/projects/OnlyFlans.jpg",
+            "url": "https://onlyflans.link",
+            "description": "A mock blog posts website where users can post images and text content to share recipes and fun stuff related to flans around the world."
+        },
+        {
             "name": "FerMDB",
             "imgUrl": "./img/projects/fmdb.png",
             "url": "https://play.google.com/store/apps/details?id=com.fer_mendoza.fermdb",
-            "description": "A simple movie data base app to manage favorites and check the latest trailers made on Android"
+            "description": "A simple movie data base app to manage favorites and check the latest trailers made on Android."
         },
         {
-            "name": "Pokemon Go Find Me",
+            "name": "Pokemon, Go Find Me",
             "imgUrl": "./img/projects/pogofindme.png",
             "url": "https://pogofind.com",
             "description": "A progressive web app (PWA) for Pokémon Go players to facilitate the ability to find each other just by using their public nicknames, coordinate lucky trades, raids, etc."
