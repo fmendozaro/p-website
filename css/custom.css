@@ -332,3 +332,7 @@ footer {
     display: block;
     margin: 0 auto;
 }
+
+.brand-logo {
+    margin-left: 20px;
+}

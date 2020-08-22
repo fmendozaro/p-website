@@ -149,7 +149,7 @@ $(document).ready(function () {
                     <p>${el.description}</p>
                 </div>
                 <div class="card-action blue-text text-darken-2">
-                    <a class="links" href="${el.url}" target="_blank">${el.url}</a>
+                    <a class="links" href="${el.url}" target="_blank">${el.name} link</a>
                 </div>
             </div>`;
     });
