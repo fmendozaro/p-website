@@ -3,17 +3,16 @@
  */
 "use restrict";
 
-var psOne = $("#psone");
-var blackout = $("#blackout");
+let psOne = $("#psone");
+let blackout = $("#blackout");
 
 function runIntro(){
 
     //Audio play
     blackout.fadeIn();
     $(".audio").trigger("play");
-    psOne.css("background-color","white");
+    psOne.addClass("psone-center");
     psOne.fadeIn(2000);
-
 }
 
 function closeIntro(){
