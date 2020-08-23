@@ -16,10 +16,10 @@ $(document).ready(function () {
     var slideShow = $('#slideshow');
 
     $('.modal').modal();
-    $(".button-collapse").sideNav({edge: "right"});
-    Materialize.fadeInImage("#content");
-    Materialize.fadeInImage('#logo');
-    $('.tap-target').tapTarget("open").tapTarget("close");
+    $(".sidenav").sidenav({edge: "right"});
+    // M.fadeInImage("#content");
+    // M.fadeInImage('#logo');
+    // $('.tap-target').tapTarget("open").tapTarget("close");
 
     function closeOverlay() {
         shrinkMenu();
@@ -95,7 +95,7 @@ $(document).ready(function () {
     });
 
     $(".links").click(function (event) {
-        $(".button-collapse").sideNav("hide");
+        $(".sidenav").sidenav("close");
         var $content = $("#content");
         var targetText = "#" + $(this).data("target");
         var targetDiv = $(targetText);
@@ -105,7 +105,7 @@ $(document).ready(function () {
             $(this).children("a")[0].click();
         }else{
             $content.html($(targetDiv).html());
-            Materialize.fadeInImage("#content");
+            // M.fadeInImage("#content");
         }
 
         // Materialize.fadeInImage(content);

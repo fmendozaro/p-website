@@ -336,3 +336,8 @@ footer {
 .brand-logo {
     margin-left: 20px;
 }
+
+.card-action {
+    background-color: #307bbb !important;
+    font-weight: bolder;
+}
