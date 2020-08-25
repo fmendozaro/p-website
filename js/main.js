@@ -7,13 +7,21 @@ $(document).ready(function () {
 
     console.log("Try the konami kode");
 
-    var div_loading_progress = $(".div_loading_progress");
-    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
-    var konamiExecuted = false;
-    var cardsDiv = $("#cards");
-    var cards = "", imgsHTML = "";
-    var today = new Date();
-    var slideShow = $('#slideshow');
+    let searchParams = new URLSearchParams(window.location.search)
+    let param = searchParams.get('page')
+    if (param != null) {
+        console.log(`#${param}-link`);
+        let temp = `#${param}-link`;
+        $(temp).trigger("click");
+    }
+
+    let div_loading_progress = $(".div_loading_progress");
+    let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], n = 0;
+    let konamiExecuted = false;
+    let cardsDiv = $("#cards");
+    let cards = "", imgsHTML = "";
+    let today = new Date();
+    let slideShow = $('#slideshow');
 
     $('.modal').modal();
     $(".sidenav").sidenav({edge: "right"});
@@ -28,7 +36,7 @@ $(document).ready(function () {
         $(".main-menu").fadeOut("menu-outro");
     }
 
-    function shrinkMenu(){
+    function shrinkMenu() {
         $(".main-menu").animate({
             height: 0,
             width: 0,
@@ -39,9 +47,9 @@ $(document).ready(function () {
         });
     }
 
-    function growMenu(){
+    function growMenu() {
         // Desktop & iPad
-        // var width = (screen.width > 1024) ? wFit : "35.5%";
+        // let width = (screen.width > 1024) ? wFit : "35.5%";
         $(".main-menu").animate({
             height: 300,
             width: 300,
@@ -69,11 +77,11 @@ $(document).ready(function () {
         }
     });
 
-    $(document).keyup(function(e) {
+    $(document).keyup(function (e) {
         //ESC
         console.log(e.keyCode);
-        if (e.keyCode === 27){
-            if(!konamiExecuted){
+        if (e.keyCode === 27) {
+            if (!konamiExecuted) {
                 closeOverlay();
             }
             konamiExecuted = false;
@@ -84,7 +92,7 @@ $(document).ready(function () {
     $("#nav-btn").click(function () {
         $("#overlay").fadeIn();
 
-        setTimeout(function(){
+        setTimeout(function () {
             growMenu();
         }, 1000);
 
@@ -96,14 +104,14 @@ $(document).ready(function () {
 
     $(".links").click(function (event) {
         $(".sidenav").sidenav("close");
-        var $content = $("#content");
-        var targetText = "#" + $(this).data("target");
-        var targetDiv = $(targetText);
+        let $content = $("#content");
+        let targetText = "#" + $(this).data("target");
+        let targetDiv = $(targetText);
 
-        if(targetText === "#contact"){
+        if (targetText === "#contact") {
             console.log($(this).children("a"));
             $(this).children("a")[0].click();
-        }else{
+        } else {
             $content.html($(targetDiv).html());
             // M.fadeInImage("#content");
         }
@@ -119,26 +127,26 @@ $(document).ready(function () {
         closeOverlay();
     });
 
-    $("#contact-form").submit(function(e){
+    $("#contact-form").submit(function (e) {
         e.preventDefault();
     });
 
-    $("#send-email").click(function(e){
-       e.preventDefault();
-       $.ajax({
-           url: "/php/mailer.php",
-           method: "POST",
-           data: $(this).parent().serialize(),
-       }).done(function(data){
-           $('#contact').modal('close');
-           Materialize.toast(data.msg, 4000);
-       }).fail(function( jqXHR, data ) {
-           Materialize.toast("Request failed: " + data.error, 4000);
-       });
+    $("#send-email").click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "/php/mailer.php",
+            method: "POST",
+            data: $(this).parent().serialize(),
+        }).done(function (data) {
+            $('#contact').modal('close');
+            Materialize.toast(data.msg, 4000);
+        }).fail(function (jqXHR, data) {
+            Materialize.toast("Request failed: " + data.error, 4000);
+        });
     });
 
     // Load projects section
-    PROPS.projects.forEach(function(el, i){
+    PROPS.projects.forEach(function (el, i) {
         cards += `<div class="card">
                 <div class="card-image">
                     <img src="${el.imgUrl}">
@@ -156,14 +164,14 @@ $(document).ready(function () {
 
     cardsDiv.append(cards);
 
-    var shuffled = PROPS.experience
+    let shuffled = PROPS.experience
         .map((a) => ({sort: Math.random(), value: a}))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value);
 
-    shuffled.forEach(function(e){
-        var lang = e.lang.toUpperCase();
-        var years = (new Date()).getFullYear() - e.year;
+    shuffled.forEach(function (e) {
+        let lang = e.lang.toUpperCase();
+        let years = (new Date()).getFullYear() - e.year;
         $('.experience-hub').append(`<span class="letter" data-letter="${lang}">${lang}</span>`);
     });
 
@@ -172,7 +180,7 @@ $(document).ready(function () {
 
     // Load the cohorts
 
-    PROPS.cohorts.forEach( function(e, i){
+    PROPS.cohorts.forEach(function (e, i) {
         imgsHTML += `<img class="cohort responsive-img" src="img/cohorts/${e}">`;
     });
     slideShow.append(imgsHTML);

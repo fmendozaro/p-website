@@ -45,7 +45,7 @@
 <div id="menu-wrapper" class="align-wrapper center-align">
     <div class="main-menu">
         <ul>
-            <li class="links" data-target="about-me">
+            <li class="links" id="about-me-link" data-target="about-me">
                 <a href="#">About me</a>
             </li>
             <li class="links" data-target="experience">
@@ -103,56 +103,61 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid valign-wrapper">
+
     <div class="row">
-            <div class="container">
-                <div id="content" class="row card-panel lighten-3 valign-wrapper">
-                    <div class="col s12">
-                        <h3 class="page-title">¡Bienvenido! / Welcome!</h3>
-                        <div class="center-align">
-                            <img id="logo" class="responsive-img hvr-grow-rotate" src="img/logo.png" alt="logo">
-                        </div>
-                        <h5 class="page-title">Introduction:</h5>
-                        <div class="divider"></div>
-                        <div class="section">
-                            <p>I’m a <b>Software Developer</b> that likes to promote the values of good communication, mentoring and empathy on software engineering development teams, I'm always with a constant curiosity to learn new technologies and improve the ones I currently use.</p>
-                            <p>
-                                I'm originally from Mexico and I currently live in Dallas, Texas, USA.
-                            </p>
-                        </div>
+        <div class="container">
+            <div id="content" class="row card-panel lighten-3">
+                <div class="col s12">
+                    <h3 class="page-title">¡Bienvenido! / Welcome!</h3>
+                    <div class="center-align">
+                        <img id="logo" class="responsive-img hvr-grow-rotate" src="img/logo.png" alt="logo">
+                    </div>
+                    <h5 class="page-title">Introduction:</h5>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <p>I’m a <b>Software Developer</b> that likes to promote the values of good communication,
+                            mentoring and empathy on software engineering development teams, I'm always with a constant
+                            curiosity to learn new technologies and improve the ones I currently use.</p>
+                        <p>
+                            I'm originally from Mexico and I currently live in Dallas, Texas, USA.
+                        </p>
                     </div>
                 </div>
+            </div>
         </div>
-
     </div>
 
     <div id="about-me" class="hide">
-        <div class="col l12 m12 s12 aboutme">
-            <h4 class="page-title">About me</h4>
-            <div class="divider"></div>
-            <div class="section">
-                <h5 class="subtitle page-title">Languages</h5>
-                <ul>
-                    <li>Spanish [Native]</li>
-                    <li>English [Professional working proficiency]</li>
-                </ul>
-                <h5 class="subtitle page-title">Achievements</h5>
-                <ul>
-                    <li>16th place in the Regional Programming Contest Zamora 2010 sponsored by IBM.</li>
-                </ul>
-                <h5 class="subtitle page-title">Professional Formation</h5>
-                <ul>
-                    <li>BS. in Computer Science [Systems Engineering] in Uruapan, Michoacán, México</li>
-                    <li>Mobile Web Specialist <a href="https://graduation.udacity.com/confirm/UGGQF9HT" target="_blank">Nanodegree</a></li>
-                    <li>Professional License issued in Mexico: 8416506</li>
-                </ul>
-                <h5 class="subtitle page-title">Hobbies</h5>
-                <ul>
-                    <li>Video games</li>
-                    <li>Travel</li>
-                    <li>Live Music</li>
-                    <li>Watch Films</li>
-                </ul>
+        <div class="col s12">
+            <div class="container">
+                <h4 class="page-title">About me</h4>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5 class="subtitle page-title">Languages</h5>
+                    <ul>
+                        <li>Spanish [Native]</li>
+                        <li>English [Professional working proficiency]</li>
+                    </ul>
+                    <h5 class="subtitle page-title">Achievements</h5>
+                    <ul>
+                        <li>16th place in the Regional Programming Contest Zamora 2010 sponsored by IBM.</li>
+                    </ul>
+                    <h5 class="subtitle page-title">Professional Formation</h5>
+                    <ul>
+                        <li>BS. in Computer Science [Systems Engineering] in Uruapan, Michoacán, México</li>
+                        <li>Mobile Web Specialist <a href="https://graduation.udacity.com/confirm/UGGQF9HT"
+                                                     target="_blank">Nanodegree</a></li>
+                        <li>Professional License issued in Mexico: 8416506</li>
+                    </ul>
+                    <h5 class="subtitle page-title">Hobbies</h5>
+                    <ul>
+                        <li>Video games</li>
+                        <li>Travel</li>
+                        <li>Live Music</li>
+                        <li>Watch Films</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -175,9 +180,12 @@
                     </div>
                 </div>
                 <div class="divider"></div>
-                <p class="description">More than <span id="dev-exp"></span> years of professional web development, mobile responsive design, development of ERP / CRM internal tools for   internal company management and some data mining.
+                <p class="description">More than <span id="dev-exp"></span> years of professional web development,
+                    mobile responsive design, development of ERP / CRM internal tools for internal company management
+                    and some data mining.
                     <br>
-                These are some of the programming languages i worked with (hover or click them to see a cool effect 😄)
+                    These are some of the programming languages i worked with (hover or click them to see a cool effect
+                    😄)
                 </p>
                 <ul class="experience-hub"></ul>
             </div>
@@ -192,12 +200,21 @@
                 <div class="divider"></div>
                 <div id="slideshow"></div>
                 <p class="description">
-                    More than <span id="teach-exp"></span> years of teaching in the IT field, delivering content that goes from the basic use of a computer to programming languages both in Spanish and English in México and USA.
+                    More than <span id="teach-exp"></span> years of teaching in the IT field, delivering content that
+                    goes from the basic use of a computer to programming languages both in Spanish and English in México
+                    and USA.
                 </p>
                 <p class="description">
-                    Most recently at Codeup I am responsible of training people from all different backgrounds including beginners without previous experience in coding during a 18 week intensive 9 to 5 program. Teaching common web development practices involving programming languages such as PHP, Java, Javascript, CSS, HTML, MySQL and some frameworks / libraries such as jQuery, Node.js and Spring Boot MVC for Java and Laravel for PHP. Along with some of the modern VCS systems as Git and it's workflow in a development team project.
+                    Most recently at Codeup I am responsible of training people from all different backgrounds including
+                    beginners without previous experience in coding during a 18 week intensive 9 to 5 program. Teaching
+                    common web development practices involving programming languages such as PHP, Java, Javascript, CSS,
+                    HTML, MySQL and some frameworks / libraries such as jQuery, Node.js and Spring Boot MVC for Java and
+                    Laravel for PHP. Along with some of the modern VCS systems as Git and it's workflow in a development
+                    team project.
                     <br>
-                    During the last 2 weeks of the course i take the role of lead IT project manager for several teams of around 3 people to create a capstone project, exposing the students to a basic Agile methodology for software development with the intention of simulating a real web development team environment.
+                    During the last 2 weeks of the course i take the role of lead IT project manager for several teams
+                    of around 3 people to create a capstone project, exposing the students to a basic Agile methodology
+                    for software development with the intention of simulating a real web development team environment.
                 </p>
             </div>
         </div>
@@ -219,10 +236,11 @@
                 <a id="icon-one" href="https://github.com/fmendozaro" target="_blank"><img src="img/github.png"
                                                                                            alt="Github"
                                                                                            class="social-icons hvr-grow-shadow"></a>
-                <a id="icon-two" href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-he-him-a7369123/" target="_blank"><img
+                <a id="icon-two" href="https://www.linkedin.com/in/fernando-mendoza-rodriguez-he-him-a7369123/"
+                   target="_blank"><img
                         src="img/linkedin.png" alt="LinkedIn" class="social-icons hvr-grow-shadow"></a>
                 <a id="icon-three" href="mailto:fernandoza@gmail.com"><img src="img/mail.png" alt="Mail"
-                                                                                    class="social-icons hvr-grow-shadow"></a>
+                                                                           class="social-icons hvr-grow-shadow"></a>
             </div>
         </div>
     </footer>

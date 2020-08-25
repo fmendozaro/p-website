@@ -53,6 +53,10 @@ body {
     color: black;
 }
 
+.container-fluid {
+    height: 90vh;
+}
+
 .page-title {
     font-family: 'Righteous', cursive;
 }
@@ -290,7 +294,6 @@ footer {
     background: url("../img/fer-bg.png") bottom right;
     background-blend-mode: lighten;
     background-repeat: no-repeat;
-
 }
 
 #lap {
