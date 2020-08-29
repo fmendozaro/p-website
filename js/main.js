@@ -113,6 +113,7 @@ $(document).ready(function () {
             $(this).children("a")[0].click();
         } else {
             $content.html($(targetDiv).html());
+            $('.slider').slider();
             // M.fadeInImage("#content");
         }
 
@@ -181,7 +182,9 @@ $(document).ready(function () {
     // Load the cohorts
 
     PROPS.cohorts.forEach(function (e, i) {
-        imgsHTML += `<img class="cohort responsive-img" src="img/cohorts/${e}">`;
+        imgsHTML += `<li>
+                        <img class="cohort responsive-img" src="img/cohorts/${e}">
+                    </li>`;
     });
     slideShow.append(imgsHTML);
 
