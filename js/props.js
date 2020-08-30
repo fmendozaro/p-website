@@ -42,13 +42,13 @@ const PROPS = {
             "name": "FerMDB",
             "imgUrl": "./img/projects/fmdb.png",
             "url": "https://play.google.com/store/apps/details?id=com.fer_mendoza.fermdb",
-            "description": "A simple movie data base app to manage favorites and check the latest trailers made on Android."
+            "description": "A simple movie database app to manage favorites and check the latest trailers made on Android."
         },
         {
             "name": "Pokemon, Go Find Me",
             "imgUrl": "./img/projects/pogofindme.png",
             "url": "https://pogofind.com",
-            "description": "A progressive web app (PWA) for Pokémon Go players to facilitate the ability to find each other just by using their public nicknames, coordinate lucky trades, raids, etc."
+            "description": "A progressive web app (PWA) for Pokémon Go players that makes easier the task of finding each other just by using their public in-game nicknames, coordinate lucky trades, raids, and more."
         },
         {
             "name": "Frest",
@@ -60,19 +60,19 @@ const PROPS = {
             "name": "Friends 4 prisoners",
             "imgUrl": "./img/projects/f4p1.jpg",
             "url": "https://friends4prisoners.com",
-            "description": "A pen pal web platform to connect prisoners seeking pen pals to correspond with. This project has a ERP system in the backend to manage all the data from the company."
+            "description": "A pen pal web platform to connect prisoners seeking other people to correspond with. This project has an ERP system in the backend to manage all the data and profiles of the application."
         },
         {
             "name": "SA Taco Radar",
             "imgUrl": "./img/projects/taco.png",
             "url": "http://tacos.fer-mendoza.com",
-            "description": "Taco Radar a place where you can find the nearest and finest real mexican flavored tacos in San Antonio, Texas. If you ever wonder how a real taco taste like, you can give it a shot and see for yourself."
+            "description": "Taco Radar is a web app where you can find the nearest and finest real Mexican flavored tacos in San Antonio, Texas. If you ever wonder how a real taco tastes like, you can give it a shot and look for yourself."
         },
         {
             "name": "Spring Blog",
             "imgUrl": "./img/projects/blog.jpg",
             "url": "http://blog.fer-mendoza.com",
-            "description": "A full-stack web application that servers as a blog made with Spring Boot for Codeup students."
+            "description": "A blogging full-stack web application project made with Spring Boot for Codeup students to use as a reference during the Capstone process."
         }
     ],
     "generalExp": {
