@@ -82,6 +82,7 @@ const PROPS = {
     "cohorts": [
         'lassen.jpg',
         'wrangell.jpg',
-        'xanadu.jpg'
+        'xanadu.jpg',
+        'andromeda.jpg'
     ]
 };
