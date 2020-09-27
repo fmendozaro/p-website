@@ -1,6 +1,6 @@
 {
     "require": {
-        "phpmailer/phpmailer": "5.2.27",
+        "phpmailer/phpmailer": "6.1.6",
         "middlewares/payload": "^0.5.0"
     }
 }
