@@ -192,7 +192,7 @@ footer {
     display: none;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -204,7 +204,6 @@ footer {
 }
 
 .psone-center {
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
