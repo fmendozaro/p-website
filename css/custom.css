@@ -343,3 +343,18 @@ footer {
     background-color: #307bbb !important;
     font-weight: bolder;
 }
+
+#close-message {
+    margin-top: 15px;
+}
+
+#close-message a {
+    margin: -8px 10px;
+}
+
+.ps-button {
+    background-color: #2d2c2f;
+    color: #7E96C0;
+    font-weight: bold;
+    width: 100px;
+}

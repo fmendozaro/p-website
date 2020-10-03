@@ -6,6 +6,10 @@
 let psOne = $("#psone");
 let blackout = $("#blackout");
 
+$("#close-intro").click(function (){
+    closeIntro();
+});
+
 function runIntro(){
     //Audio play
     blackout.show();
