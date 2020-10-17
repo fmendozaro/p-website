@@ -3,8 +3,9 @@
  */
 "use restrict";
 
-let psOne = $("#psone");
-let blackout = $("#blackout");
+let $psOne = $("#psone");
+let $blackout = $("#blackout");
+let $audio = $("#ps-audio")[0];
 
 $("#close-intro").click(function (){
     closeIntro();
@@ -12,14 +13,16 @@ $("#close-intro").click(function (){
 
 function runIntro(){
     //Audio play
-    blackout.show();
-    psOne.css('display', 'flex').hide().fadeIn(3000);
-    $(".audio").trigger("play");
-    psOne.addClass("psone-center");
-    psOne.fadeIn(3000);
+    $blackout.show();
+    $psOne.css('display', 'flex').hide().fadeIn(3000);
+    $audio.play();
+    $psOne.addClass("psone-center");
+    $psOne.fadeIn(3000);
 }
 
 function closeIntro(){
-    psOne.fadeOut();
-    blackout.fadeOut();
+    $psOne.fadeOut();
+    $blackout.fadeOut();
+    $audio.pause();
+    $audio.currentTime = 0;
 }
